@@ -101,3 +101,13 @@ Agora, basta acessar tal diretório para ter acesso à chave SSH.
 
 Observação: Nesse diretório serão gerados dois arquivos que representam a chave SSH,
  sendo um para a chave privada (arquivo id_ed25519) e o outro para a chave pública (id_ed25519.pub).
+
+ -----------------------------------------------------------------------------------//---------------
+
+ O Git é uma ferramenta excelente para acompanhar a mudança entre versões de um mesmo projeto e, 
+ dentre vários benefícios, nos ajuda a observar de perto o desenvolvimento do seu aprendizado.
+  Tudo isso de uma forma organizada através dos commits.
+
+Além disso, algo que é essencial no universo da tecnologia é apresentar o seu progresso 
+para a comunidade e montar um portfólio dos seus projetos para demonstrar suas habilidades. 
+Dessa forma, o GitHub é essencial para compartilhar e colaborar em projetos de programação de todo o mundo.

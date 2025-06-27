@@ -16,6 +16,16 @@ https://cursos.alura.com.br/course/git-github-compartilhando-colaborando-projeto
 
 https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
+
+---- 
+O Git é uma ferramenta excelente para acompanhar a mudança entre versões de um mesmo projeto e, 
+ dentre vários benefícios, nos ajuda a observar de perto o desenvolvimento do seu aprendizado.
+  Tudo isso de uma forma organizada através dos commits.
+
+Além disso, algo que é essencial no universo da tecnologia é apresentar o seu progresso 
+para a comunidade e montar um portfólio dos seus projetos para demonstrar suas habilidades. 
+Dessa forma, o GitHub é essencial para compartilhar e colaborar em projetos de programação de todo o mundo.
+
 ---------------------------------------------------------------------------
 
 1 - Adicionar um repositório remoto:
@@ -81,12 +91,14 @@ git remote rename origin novo-origin
 
 Isso renomeará o repositório remoto de "origin" para "novo-origin".
 
------------------------------
--------------
+----
+
 O comando git push deve ser executado para sincronizar as mudanças do repositório local com o repositório remoto, 
 ou seja, quando desejamos enviar os novos commits que realizamos em nosso repositório local para o repositório remoto. 
 No entanto, para garantir uma conexão segura, é essencial configurar uma chave SSH no computador antes de
  executar esse comando.
+
+---
 
 Chave SSH
 Ao vincular um repositório remoto ao nosso repositório local, via comando git remote add,
@@ -108,10 +120,4 @@ Observação: Nesse diretório serão gerados dois arquivos que representam a ch
 
  -----------------------------------------------------------------------------------//---------------
 
- O Git é uma ferramenta excelente para acompanhar a mudança entre versões de um mesmo projeto e, 
- dentre vários benefícios, nos ajuda a observar de perto o desenvolvimento do seu aprendizado.
-  Tudo isso de uma forma organizada através dos commits.
-
-Além disso, algo que é essencial no universo da tecnologia é apresentar o seu progresso 
-para a comunidade e montar um portfólio dos seus projetos para demonstrar suas habilidades. 
-Dessa forma, o GitHub é essencial para compartilhar e colaborar em projetos de programação de todo o mundo.
+ 

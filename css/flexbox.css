@@ -1,0 +1,173 @@
+/* CABECALHO */
+
+.cabecalho__container {
+    display: flex;
+    /* margin-top: 1em; */
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    /* cabecalho fica fixo na tela. Já informamos que desejamos que o cabeçalho fique fixo,
+     agora precisamos informar a coordenada onde ele será fixado,
+     algo feito com a propriedade top e um valor de distância, nesse caso 0. */
+}
+
+.cabecalho__pesquisar__item {
+    display: none;
+
+}
+
+
+/* SEÇÃO SUPERIOR */
+
+.superior__secao__container {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    gap: 1em;
+    overflow: scroll;
+    /* Note que os itens que possuem mais de uma palavra estão sendo quebrados em duas linhas, 
+    o que não é o comportamento desejado. Queremos que as palavras fiquem alinhadas,
+     mas nesse caso não é ideal utilizarmos o flex-wrap com o valor nowrap. 
+     Isso porque o Flexbox não é feito para formatar textos, e existem propriedades 
+     específicas para isso. Uma delas é o white-space, à qual atribuiremos o valor nowrap.  */
+}
+
+/* Menu lateral */
+
+.menu__container {
+    position: fixed;
+    bottom: 0%;
+    height: 80px;
+    width: 100%;
+
+}
+
+.menu__lista {
+    display: flex;
+    justify-content: space-around;
+     height: 100%  
+    /* align-self: flex-start; */
+}
+
+.menu__lista li {
+    /* background-color: blue; */
+    align-self: center;
+}
+
+.menu__itens {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* .menu__lista:nth-child()
+.menu__lista:nth-child(1) 
+Feito isso, os blocos de lista serão ocultados, mantendo apenas o que desejamos exibir.
+ A seguir, continuaremos a organizar esses elementos com o Flexbox.*/
+ 
+.menu__lista:nth-child(2),
+.menu__lista:nth-child(3),
+.menu__lista:nth-child(4) {
+    display: none;
+}
+
+
+/* VIDEOS */
+/* 
+.videos__item {
+    height: 303px;
+    width: 280px;
+} */
+
+
+
+/* RODAPE */
+
+
+.rodape__container {
+    display: flex;
+    /* justify-content: space-between;      */
+    flex-flow: column wrap;
+}
+
+
+
+
+@media (min-width: 834px) {
+    /* CABECALHO */
+    .cabecalho__pesquisar__item {
+        display: block;
+    /* RODAPE */
+    }
+    .rodape__container {
+        justify-content: space-between;
+    }
+    .menu__container {
+        position: fixed;
+        left: 0;
+        height: 100%;
+        width: 75px;
+    }
+    .menu__lista {
+        flex-direction: column;  
+        gap: 2em;      
+    }
+    .menu__itens {
+        gap: 0.5em;
+    }
+
+}
+
+@media (min-width: 1440px) {
+    .menu__container {
+        width: 239px;
+        overflow: scroll;  /* aplica barra de rolagem para mostrar todos os itens */
+    }
+    .menu__lista {
+        height: auto;
+        padding: 20px 17px 20px 15px;
+        gap: 15px; 
+    }
+
+    .menu__lista:nth-child(2),
+    .menu__lista:nth-child(3),
+    .menu__lista:nth-child(4) {
+            display: flex;
+    }
+    .menu_lista:nth-child(3){
+        flex-direction: column-reverse;
+    }
+    .menu__itens { 
+        flex-direction: row;
+        gap: 15px;
+        align-items: center;
+    }
+}
+
+/* https://www.alura.com.br/artigos/css-guia-do-flexbox 
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/ 
+https://www.w3schools.com/css/css3_flexbox_container.asp
+https://www.alura.com.br/artigos/criando-layouts-com-css-grid-layout
+ 
+pegaremos o trecho de código onde escondemos os demais elementos usando a técnica do nth-child
+ e colaremos em nosso @media(). Para esconder os elementos, utilizamos 
+a propriedade display: none. Como queremos exibi-los, alteraremos o valor desse display para flex.
+
+ Quando temos algum problema com a exibição do nosso CSS, podemos inspecionar a página para entender
+  melhor o  que está acontecendo. Procurando pelos blocos de lista do menu, perceberemos que todos estão
+  com display: flex.
+
+Porém, todos os elementos que possuem a classe .menu__lista estão com a altura em 100%.
+ Como o primeiro bloco já está ocupando 100% do contêiner de seu elemento pai,
+  não há espaço para que os demais sejam exibidos. Para resolver isso, precisaremos alterar essa altura,
+   fazendo com que eles se ajustem automaticamente. Ainda no @media(), chamaremos a
+    classe .menu__lista e aplicaremos um height: auto de modo que essa altura seja 
+    ajustada automaticamente.
+    
+    Utilizando propriedades flex-container, 
+    que são sempre aplicadas no elemento pai. Possibilitando manipular todos
+     os elementos no seu interior.
+
+E, também, utilizando propriedades flex-item, estas são sempre aplicadas em cada 
+elemento que deseja manipular.*/

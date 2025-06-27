@@ -5,7 +5,10 @@ criar a pasta no GitHub
 git branch -M main
 git remote add origin git@github.com:SinaraSSB/PlayVideo.git
 git remote add origin https://github.com/SinaraSSB/playvideo.git  não funcionaram
--- error: remote origin already exists.
+-- error: remote origin already exists.  era a chave,, criar chave 
 git push -u origin main
 
 https://cursos.alura.com.br/course/git-github-compartilhando-colaborando-projetos/task/139310
+
+https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+

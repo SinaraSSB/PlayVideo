@@ -12,3 +12,22 @@ https://cursos.alura.com.br/course/git-github-compartilhando-colaborando-projeto
 
 https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
 
+Para saber mais: Chave SSH
+ Próxima Atividade
+
+O comando git push deve ser executado para sincronizar as mudanças do repositório local com o repositório remoto, 
+ou seja, quando desejamos enviar os novos commits que realizamos em nosso repositório local para o repositório remoto. 
+No entanto, para garantir uma conexão segura, é essencial configurar uma chave SSH no computador antes de
+ executar esse comando.
+
+Chave SSH
+Ao vincular um repositório remoto ao nosso repositório local, via comando git remote add,
+ precisamos utilizar algum protocolo seguro, como HTTPS ou SSH. No caso de se utilizar o protocolo SSH,
+  escolha realizada neste curso, devemos gerar uma chave SSH em nosso computador, além de cadastrá-la em 
+  nossa conta do GitHub. Isso é necessário para garantir a autenticação, pois o GitHub checa se quem está realizando 
+  o push dos commits tem permissão para realizar tal ação.
+
+Geração de uma chave SSH
+Antes de executar o comando git push, precisamos gerar uma chave SSH. 
+A geração da chave é feita via terminal, 
+com o comando ssh-keygen -t ed25519 -C "SEU EMAIL AQUI":

@@ -1,11 +1,15 @@
 git init 
+
 git add . 
+
 git commit -m "First commit play video"
-criar a pasta no GitHub
+
 git branch -M main
+
 git remote add origin git@github.com:SinaraSSB/PlayVideo.git
-git remote add origin https://github.com/SinaraSSB/playvideo.git  não funcionaram
--- error: remote origin already exists.  era a chave,, criar chave 
+
+git remote add origin https://github.com/SinaraSSB/playvideo.git  
+
 git push -u origin main
 
 https://cursos.alura.com.br/course/git-github-compartilhando-colaborando-projetos/task/139310

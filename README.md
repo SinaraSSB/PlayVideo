@@ -1,11 +1,17 @@
 <h1> --- Iniciando o Repositório Local ---- </h1>
 <p>
 git init 
+
 git add . 
+
 git commit -m "First commit play video"
+
 git branch -M main
+
 git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
+
 git remote add origin https://github.com/SinaraSSB/playvideo.git  
+
 git push -u origin main </p>
 
 </hr>

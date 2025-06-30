@@ -240,10 +240,41 @@ O Git oferece a possibilidade de adicionar mais de um autor a um commit.
 
 Cada coautor deve estar em uma linha diferente, como é mostrado no exemplo a seguir:
 
-> git commit -m "Adicionar nova funcionalidade.
+git commit -m "Adicionar nova funcionalidade.
 >
 >
-> Co-authored-by: NOME <nome@email.com>
-> Co-authored-by: OUTRO-NOME <outro@email.com>"
+Co-authored-by: NOME <nome@email.com>
+Co-authored-by: OUTRO-NOME <outro@email.com>"
 
 https://docs.github.com/pt/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors
+
+---
+
+<h2> Baixando novos commits -- git pull</h2>
+
+o repositório local não atualiza automaticamente, 
+Para isso, existe o comando git pull especificamente para isso. 
+Ele funciona como o oposto do push, já que puxa os commits do remoto para o local.
+além de git pull, na mesma linha de código indicamos qual é o repositório remoto do qual baixaremos esses commits,
+nesse caso será o origin. Em seguida, passamos a branch main, onde ele trará esses commits para o repositório local.
+
+> git pull origin main
+
+Portanto, o comando git pull tem esse objetivo, baixar os novos commits
+ que outras pessoas colaboradoras do seu repositório enviaram para o GitHub. 
+ Com isso, temos um fluxo de trabalho.
+
+--- 
+<h3> Fluxo de trabalho Git </h3>
+
+Quando estivermos trabalhando em um projeto e precisarmos realizar mudanças, 
+usaremos o git status para verificar os arquivos modificados.
+
+Adicionaremos essas mudanças com o comando git add, depois, 
+realizaremos um commit com o git commit. 
+Subiremos essas mudanças para o repositório com o git push e eventualmente, 
+conforme outras pessoas forem colaborando com o projeto, traremos essas mudanças 
+novamente para o computador com o git pull.
+Cada pessoa faz o clone do repositório local e centralizam no repositório remoto do GitHub, 
+permitindo a colaboração de todos.
+---

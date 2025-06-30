@@ -217,3 +217,33 @@ através dessa cadeia de commits, o Git registra um histórico completo de todos
 Caso queira conhecer melhor sobre esse processo, acesse a documentação oficial do Git.
  https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-O-B%C3%A1sico-do-Git 
 </p>
+
+<h2> Adicionando colaboradores ao projeto</h2>
+Se quisermos que outras pessoas colaborem nesse projeto, 
+é preciso adicioná-las manualmente no projeto. 
+Logamos no GitHub e acessamos o repositório.
+Na barra de menu superior, clicamos no botão "Settings", que se refere a configuração
+No menu lateral esquerdo, clicamos em "Collaborators". Feito isso, notamos que não há nenhum colaborador.
+Para adicionarmos, no fim da tela, clicamos no botão verde chamado "Add people".
+Na nova janela, há um campo referente ao username da pessoa que adicionaremos como colaboradora.
+Ao fazer isso, a ferramenta indica que o pedido de acesso está pendente, 
+pois o novo Colaborador precisa aceitá-lo. Sendo assim, esse processo não é automático.
+Cada commit possui por padrão um autor, que é a pessoa que realizou aquelas alterações no código.
+
+Entretanto, quando trabalhamos em equipe pode ser que algum trecho de código seja escrito em dupla ou trio. 
+Assim, como definir a autoria dessas outras pessoas no commit?
+
+O Git oferece a possibilidade de adicionar mais de um autor a um commit.
+ Para isso, após escrever a mensagem do commit, pulamos duas linhas e usamos 
+ a palavra-chave Co-authored-by:, seguido do nome e e-mail associado ao GitHub (entre < >)
+  de cada pessoa colaboradora.
+
+Cada coautor deve estar em uma linha diferente, como é mostrado no exemplo a seguir:
+
+> $ git commit -m "Adicionar nova funcionalidade.
+>
+>
+> Co-authored-by: NOME <nome@email.com>
+> Co-authored-by: OUTRO-NOME <outro@email.com>"
+
+https://docs.github.com/pt/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors

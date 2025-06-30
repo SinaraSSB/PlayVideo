@@ -1,18 +1,18 @@
 <h1> --- Iniciando o Repositório Local ---- </h1>
 <p>
-git init 
+> git init 
 
-git add . 
+> git add . 
 
-git commit -m "First commit play video"
+> git commit -m "First commit play video"
 
-git branch -M main
+> git branch -M main
 
-git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
+> git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
 
-git remote add origin https://github.com/SinaraSSB/playvideo.git  
+> git remote add origin https://github.com/SinaraSSB/playvideo.git  
 
-git push -u origin main </p>
+> git push -u origin main </p>
 
 <hr>
 
@@ -43,7 +43,7 @@ Essa etapa é crucial para possibilitar a colaboração e o compartilhamento de 
 
 A sintaxe básica do comando é a seguinte:
 
-git remote add apelido url
+> git remote add apelido url
  
 'apelido': Este é um nome que você atribui ao repositório remoto. Geralmente, se utiliza nomes descritivos,
  como "origin" para o repositório principal no GitHub, 
@@ -59,7 +59,7 @@ Para listar os repositórios remotos associados ao seu projeto local, você pode
 comando git remote -v. Isso exibirá uma lista de todos os repositórios remotos vinculados ao seu projeto, 
 juntamente com suas URLs. Veja um exemplo:
 
-git remote -v
+> git remote -v
 
 
 <h3> 3 - Remover um repositório remoto: </h3>
@@ -68,7 +68,7 @@ Caso você não precise mais de um repositório remoto específico,
 pode removê-lo com o comando git remote remove apelido. Substitua 'apelido' 
 pelo nome do repositório remoto que deseja remover. Aqui está um exemplo:
 
-git remote remove origin
+> git remote remove origin
 
 Após a execução deste comando, o repositório remoto chamado "origin" 
 será desvinculado do seu projeto local.
@@ -82,7 +82,7 @@ como quando a URL do servidor do GitHub é modificada ou quando você copiou a U
  Substitua 'apelido' pelo nome do repositório remoto e 'nova_url' pela nova URL que você deseja associar a ele.
   Aqui está um exemplo:
 
-git remote set-url origin https://github.com/seu-usuario/seu-repositorio.git
+> git remote set-url origin https://github.com/seu-usuario/seu-repositorio.git
 
 Isso atualizará a URL do repositório remoto "origin" para a nova URL especificada.
 
@@ -138,11 +138,11 @@ Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no term
  Em seguida, para clonar o repositório, vamos passar o comando git clone seguido da URL 
  que copiamos e apertamos "Enter".
 
- git clone https://github.com/SinaraSSB/alurabook.git
+ > git clone https://github.com/SinaraSSB/alurabook.git
 
  <hr>
 
- <h5> O comando clone já realiza automaticamente a conexão entre o repositório remoto e o repositório local. </h5>
+ <h4> O comando clone já realiza automaticamente a conexão entre o repositório remoto e o repositório local. </h4>
  <p>   não precisa git remote add origin git@github.com:SinaraSSB/PlayVideo.git 
  
  > git remote

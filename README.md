@@ -1,4 +1,4 @@
---- Iniciando o Repositório Local ---- 
+<h2> --- Iniciando o Repositório Local ---- </h2>
 
 git init 
 git add . 
@@ -100,7 +100,8 @@ No entanto, para garantir uma conexão segura, é essencial configurar uma chave
 
 ---
 
-Chave SSH
+<h2> Chave SSH </h2>
+
 Ao vincular um repositório remoto ao nosso repositório local, via comando git remote add,
  precisamos utilizar algum protocolo seguro, como HTTPS ou SSH. No caso de se utilizar o protocolo SSH,
   escolha realizada neste curso, devemos gerar uma chave SSH em nosso computador, além de cadastrá-la em 
@@ -120,4 +121,15 @@ Observação: Nesse diretório serão gerados dois arquivos que representam a ch
 
  -----------------------------------------------------------------------------------//---------------
 
- 
+---
+
+<h2>Clonando um repositório </h2>
+
+Na opção de clonar, o GitHub fornece a URL do repositório. Sendo assim,
+ a copiamos e abrimos o explorador de arquivos do computador e acessamos a área de trabalho.
+
+Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no terminal".
+ Em seguida, para clonar o repositório, vamos passar o comando git clone seguido da URL 
+ que copiamos e apertamos "Enter".
+
+ git clone https://github.com/SinaraSSB/alurabook.git

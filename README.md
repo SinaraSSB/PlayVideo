@@ -1,17 +1,16 @@
-<h2> --- Iniciando o Repositório Local ---- </h2>
-
+<h1> --- Iniciando o Repositório Local ---- </h1>
+<p>
 git init 
 git add . 
 git commit -m "First commit play video"
-
 git branch -M main
-
-git remote add origin git@github.com:SinaraSSB/PlayVideo.git
-
+git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
 git remote add origin https://github.com/SinaraSSB/playvideo.git  
+git push -u origin main </p>
 
-git push -u origin main
+</hr>
 
+https://www.devmedia.com.br/comandos-e-tags-html5/23618
 https://cursos.alura.com.br/course/git-github-compartilhando-colaborando-projetos/task/139310
 
 https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent

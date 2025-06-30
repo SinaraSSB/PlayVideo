@@ -240,7 +240,7 @@ O Git oferece a possibilidade de adicionar mais de um autor a um commit.
 
 Cada coautor deve estar em uma linha diferente, como é mostrado no exemplo a seguir:
 
-> $ git commit -m "Adicionar nova funcionalidade.
+> git commit -m "Adicionar nova funcionalidade.
 >
 >
 > Co-authored-by: NOME <nome@email.com>

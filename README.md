@@ -161,8 +161,8 @@ Se analisarmos o retorno, retonhamos o primeiro commit que o Rodrigo fez para su
  <p>  Quando estamos trabalhando em um projeto utilizando o versionamento Git e a IDE VSCode, 
  ao adicionar ou alterar algum arquivo aparece uma sinalização ao lado do nome desses arquivos. 
 
- M: A letra M representa o estado Modified, do português modificado. Isso significa que o arquivo 
+<strong> M: A letra M  </strong>representa o estado Modified, do português modificado. Isso significa que o arquivo 
  já existia no repositório, mas que recebeu alguma modificação que ainda não foi registrada no Git.
 
-U: A letra U representa o estado Untracked, do português não rastreado. Isso significa que o arquivo 
+<strong> U: A letra U </strong>representa o estado Untracked, do português não rastreado. Isso significa que o arquivo 
 ainda não existia no repositório e que ainda não teve seu registro (commit) feito no Git. </P>

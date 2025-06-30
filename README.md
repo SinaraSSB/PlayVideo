@@ -17,6 +17,7 @@ git push -u origin main </p>
 </hr>
 
 https://www.devmedia.com.br/comandos-e-tags-html5/23618
+
 https://cursos.alura.com.br/course/git-github-compartilhando-colaborando-projetos/task/139310
 
 https://docs.github.com/pt/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
@@ -33,7 +34,7 @@ Dessa forma, o GitHub é essencial para compartilhar e colaborar em projetos de 
 
 ---------------------------------------------------------------------------
 
-1 - Adicionar um repositório remoto:
+<h3> 1 - Adicionar um repositório remoto: </h3>
 
 Quando você deseja estabelecer uma conexão entre seu repositório local e um repositório remoto, 
 como aquele hospedado no GitHub, o comando git remote add é a ferramenta essencial. 
@@ -52,7 +53,7 @@ git remote add apelido url
 serve como o endereço para acessar e interagir com ele pela internet. Certifique-se de copiar a URL 
 correta do repositório que deseja adicionar.
 
-2 - Listar os repositórios remotos:
+<h3> 2 - Listar os repositórios remotos:  </h3>
 
 Para listar os repositórios remotos associados ao seu projeto local, você pode utilizar o 
 comando git remote -v. Isso exibirá uma lista de todos os repositórios remotos vinculados ao seu projeto, 
@@ -61,7 +62,7 @@ juntamente com suas URLs. Veja um exemplo:
 git remote -v
 
 
-3 - Remover um repositório remoto:
+<h3> 3 - Remover um repositório remoto: </h3>
 
 Caso você não precise mais de um repositório remoto específico, 
 pode removê-lo com o comando git remote remove apelido. Substitua 'apelido' 
@@ -73,7 +74,7 @@ Após a execução deste comando, o repositório remoto chamado "origin"
 será desvinculado do seu projeto local.
 
 
-4 - Alterar a URL de um repositório remoto:
+<h3> 4 - Alterar a URL de um repositório remoto: </h3>
 
 Às vezes, é necessário atualizar a URL de um repositório remoto, 
 como quando a URL do servidor do GitHub é modificada ou quando você copiou a URL incorreta ao adicionar
@@ -86,7 +87,7 @@ git remote set-url origin https://github.com/seu-usuario/seu-repositorio.git
 Isso atualizará a URL do repositório remoto "origin" para a nova URL especificada.
 
 
-5 - Alterar o apelido de um repositório remoto:
+<h3> 5 - Alterar o apelido de um repositório remoto: </h3>
 
 Se você deseja renomear um repositório remoto, use o comando 
 git remote rename apelido novo_apelido. Substitua 'apelido' pelo nome atual do repositório remoto e

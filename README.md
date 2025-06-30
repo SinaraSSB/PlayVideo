@@ -142,7 +142,20 @@ Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no term
 
  <hr>
 
- <h2>
+ <h5> O comando clone já realiza automaticamente a conexão entre o repositório remoto e o repositório local. </h5>
+ <p>   não precisa git remote add origin git@github.com:SinaraSSB/PlayVideo.git 
+ 
+ > git remote
+
+ Feito isso é exibido o origin.
+ O origin é o nome que o GitHub atribui quando fazemos o clone, é como se referisse a origem do repositório.
+
+ Passamos git push e em sequência precisamos informar para onde enviaremos o commit. 
+ Escrevemos origin que é o apelido do repositório remoto, seguido de main que é a branch e apertamos "Enter".
+
+ > git push origin main
+
+</p>
 
 <h2> git log </h2>
 
@@ -184,4 +197,23 @@ Mantenha a mensagem curta e concisa: A primeira linha da mensagem deve conter, n
 <li>É importante ter em mente que a mensagem do commit é uma forma de documentação do histórico das mudanças que ocorreram ao longo do código. A pessoa que ler essa mensagem pode não ter conhecimento do contexto original. Assim, garanta que suas mensagens de commit tenham clareza e sejam suficientemente descritivas. </li>
 <ul>
 
+Um commit deve ser realizado sempre que você finalizar uma tarefa específica ou resolver algum bug. Isso mantém o histórico de commits claro e rastreável, de modo que seja possível entender o que foi feito em cada commit.
+
+Assim, é importante realizar commits frequentemente. Porém, evite realizar commits muito pequenos ou muito grandes, 
+pois isso pode tornar difícil o seu entendimento.
+
+Lembre-se de nunca realizar um commit de um código que você sabe que contém bugs. O ideal é que o commit 
+contenha somente código funcional.
+
+O controle de mudanças do Git é feito através dos commits. Cada commit armazena o estado completo do projeto em um determinado momento por meio de um snapshot. Ou seja, cada commit é um registro completo do repositório no momento 
+em que esse commit foi criado.
+
+Como cada commit é uma representação completa e consistente do estado do projeto em um determinado ponto no tempo,
+ isso facilita a rastreabilidade e o entendimento de como se deu a evolução do código ao longo do tempo.
+
+Todo commit conta com um id único e traz uma referência aos commits anteriores. Assim, 
+através dessa cadeia de commits, o Git registra um histórico completo de todos os commits realizados no repositório.
+
+Caso queira conhecer melhor sobre esse processo, acesse a documentação oficial do Git.
+ https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-O-B%C3%A1sico-do-Git 
 </p>

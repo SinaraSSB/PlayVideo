@@ -1,24 +1,16 @@
 <h1> --- Iniciando o Repositório Local ---- </h1>
-<h3>--------- Git -  Alura Play ----------- </h3>
-* item
-* item
-
-1. item
-2. item
-
-   > quote
-   > > quoted quote
+<h3>Curso de Git e GitHub: compartilhando e colaborando em projetos </h3>
 ---
 
 <p>
 
 > `git init `
 
-> git add . 
+> `git add . `
 
-> git commit -m "First commit play video"
+> `git commit -m "First commit play video"`
 
-> git branch -M main
+> `git branch -M main `
 
 > git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
 

@@ -265,11 +265,11 @@ Portanto, o comando git pull tem esse objetivo, baixar os novos commits
  Com isso, temos um fluxo de trabalho.
 
 --- 
+
 <h3> Fluxo de trabalho Git </h3>
 
 Quando estivermos trabalhando em um projeto e precisarmos realizar mudanças, 
 usaremos o git status para verificar os arquivos modificados.
-
 Adicionaremos essas mudanças com o comando git add, depois, 
 realizaremos um commit com o git commit. 
 Subiremos essas mudanças para o repositório com o git push e eventualmente, 
@@ -277,6 +277,7 @@ conforme outras pessoas forem colaborando com o projeto, traremos essas mudança
 novamente para o computador com o git pull.
 Cada pessoa faz o clone do repositório local e centralizam no repositório remoto do GitHub, 
 permitindo a colaboração de todos.
+
 ---
 
 <h2> Resolvendo Conflitos </h2>

@@ -1,11 +1,20 @@
 <h1> --- Iniciando o Repositório Local ---- </h1>
 <h3>--------- Git -  Alura Play ----------- </h3>
+**Markdown**   __Markdown__
 
+* item
+* item
+
+1. item
+2. item
+
+   > quote
+   > > quoted quote
 ---
 
 <p>
 
-> git init 
+> `git init `
 
 > git add . 
 

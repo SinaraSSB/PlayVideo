@@ -422,4 +422,41 @@ que identifica nosso commit.
 > porque ele não faz mais sentido.
 > Nós apresentamos essas duas situações: em uma delas estamos revertendo um commit, 
 > na outra estamos apagando um commit. Mas há uma terceira situação possível.
+
+<strong>é importante lembrarmos que o comando reset que acabamos de explicar deve ser usado apenas quando tivermos feito esse commit de alteração no nosso repositório local. </strong>
+  Caso já tenhamos subido esse commit, não é tão interessante usar esse comando e alterar o histórico de versões que já está público.
+  Essa é mais uma vantagem do Git: nós fazemos os commits e eles só existem localmente até o momento que sincronizamos e enviamos para o GitHub.
+
+  No entanto, enquanto o commit está apenas local, as outras pessoas não têm esse commit. 
+  Portanto, podemos apagar, desfazer, fazer mudanças. Mas, se já enviamos para o GitHub, 
+  não é recomendado apagar um commit, porque isso poderia causar confusão.
 </p>
+
+<hr>
+
+<h3> trocando a msg de um commit  </h3>
+<p> 
+git commit --amend -m "Trocando só a msg do commit"
+
+ É o próprio comando git commit, como se estivéssemos fazendo um novo commit. 
+ Mas não é um novo commit por causa do parâmetro --amend.
+ Ele indica ao Git que não queremos fazer um novo commit, mas alterar o anterior. 
+ Então é só passar o -m, com o texto da mensagem correta.
+
+Ou a situação pode ter sido a seguinte: você editou seis arquivos, por exemplo, 
+e quando foi fazer o commit, você adicionou cinco e deixou um para trás.
+E então você fez o commit. Também é possível fazer esse comando -- amend.
+Nesse caso você não iria alterar a mensagem, 
+mas precisaria apenas adicionar o arquivo e fazer o commit com o amend.
+
+É importante destacar que os comandos do Git que permitem modificar o histórico de commits devem ser utilizados com prudência e apenas quando o commit em questão ainda não foi enviado ao repositório remoto, ou seja, quando ele existe apenas no seu repositório local.
+
+Modificar um commit que já se tornou público, ou seja, aquele que já foi enviado ao GitHub ou a qualquer outro repositório remoto, pode acarretar problemas consideráveis na colaboração com as outras pessoas e na integridade do histórico de um projeto.
+
+Em situações de colaboração em equipe, é essencial manter a integridade do histórico de commits, pois qualquer modificação em um commit que outras pessoas estejam trabalhando pode resultar em conflitos e dificuldades na colaboração.
+
+É recomendável evitar a modificação excessiva do histórico de commits, uma vez que isso pode tornar o histórico confuso. O histórico deve ser uma representação precisa do progresso do projeto ao longo do tempo.
+
+</p>
+
+**Markdown

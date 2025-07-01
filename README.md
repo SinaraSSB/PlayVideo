@@ -488,3 +488,7 @@ Existe um recurso que nos permite criar um arquivo para informar ao Git quais di
 Portanto, na linha abaixo, poderíamos colocar arquivo.txt passando um nome específico ou padrão,
  por exemplo, *.css. Nós usaremos apenas o temp/. Com isso, estamos dizendo, basicamente, 
  para o Git: "Ignore a pasta temp do projeto".
+
+` *.doc
+temp/
+PastaTXT/ ` 

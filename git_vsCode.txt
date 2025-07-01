@@ -76,3 +76,7 @@ Isso significa que ele enviará para o seu repositório remoto o que está na br
 
 A ideia é que nós sempre utilizemos o Git no VS Code por essa opção, 
 pois simplifica o processo de sincronização das mudanças
+
+--- 
+
+<h2> Resolvendo Conflitos </h2>

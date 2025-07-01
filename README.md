@@ -278,3 +278,19 @@ novamente para o computador com o git pull.
 Cada pessoa faz o clone do repositório local e centralizam no repositório remoto do GitHub, 
 permitindo a colaboração de todos.
 ---
+
+<h2> Resolvendo Conflitos </h2>
+Quando trabalhamos em grupos outras pessoas enviam atualizações, 
+Para baixar esses commits, precisamos acessar a aba de Controle de Origem, ou seja, 
+a integração com o Git. Em seguida, clicamos no terceiro ícone da barra lateral esquerda. 
+Nessa aba, clicaremos no botão "Views and More Actions" (Views e Mais Ações),
+ que tem o ícone de reticências (…) e fica no canto superior direito da aba.
+Com isso, abrimos um menu suspenso onde a terceira opção é "Pull" (Puxar). 
+Ao clicarmos nele, baixamos os commits dos outros colaboradores do projeto.
+
+Quando o Git for tentar baixar o commit que ambos estão alterando o mesmo arquivo, na mesma linha.   haverá um conflito com o meu commit, porque ambos estão alterando o mesmo arquivo, na mesma linha. 
+
+Ao clicarmos no Pull, ele tenta sincronizar e mostra uma mensagem de erro. Inclusive, apareceu um pop-up, no canto inferior direito do Visual Studio Code, informando que houve um conflito ao tentar fazer o merge (fusão), desses commits.
+se houver um conflito no mesmo arquivo e na mesma linha, 
+ele não consegue distinguir qual versão manter.
+O Git não escolhe uma versão, ele nos deixa decidir qual versão deve ser mantida

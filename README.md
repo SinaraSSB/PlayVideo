@@ -1,11 +1,18 @@
 <h1> --- Iniciando o Repositório Local ---- </h1>
 <h3>--------- Git -  Alura Play ----------- </h3>
+* item
+* item
 
+1. item
+2. item
+
+   > quote
+   > > quoted quote
 ---
 
 <p>
 
-> git init 
+> `git init `
 
 > git add . 
 
@@ -385,6 +392,45 @@ Nós fizemos o revert, desfizemos a alteração de um determinado commit. O pró
 desfazer as respectivas alterações e registrar isso no histórico, revertendo o código para a versão anterior.
 
 </p>
+
+<h2> git reset - Resetando um commit </h2>
+
+<p> 
+aprendemos como desfazer um commit utilizando o comando git revert.
+ Esse comando gera um novo commit com essa mudança, desfazendo todo o código
+ que foi alterado naquele determinado commit.
+
+existem situações em que não queremos, de fato, desfazer um commit. 
+Na verdade, queremos apagar o commit do histórico.
+Por exemplo, nós podemos estar trabalhando em uma funcionalidade que no meio do caminho é cancelada, 
+sendo que nós já tínhamos alterado os arquivos e feito um ou mais commits. 
+Então, aqueles commits não fazem mais sentido no histórico e queremos apagá-los.
+
+podemos rodar um log para visualizar esse commit no histórico, mas terá que ser pelo terminal.
+Da mesma forma que o revert, se queremos apagar um commit,
+ vamos precisar do ID do commit em questão para identificá-lo.
+
+O comando para apagar um commit é o git reset --hard junto do ID do commit.
+> git reset --hard a3322db2eb6f82162977169f5461fc93b81bfac1
+Um detalhe importante: o parâmetro --hard foi colocado porque o comando reset possui
+ algumas opções, alguns modos de realizar esse reset.
+  O parâmetro --hard serve para apagar o commit e também apagar a mudança no código.
+
+Na verdade, com o comando reset utilizando a opção --hard, 
+temos que passar o ID do commit, mas não é o ID do commit que queremos resetar,
+ mas sim o ID do comando anterior. o qual queremos voltar pra ele
+  temos que passar o ID da versão a que queremos retornar. 
+  Ou seja, esse comando retorna ao estado do commit indicado pelo ID.
+Ao dar "Enter", uma mensagem aparece indicando que nosso HEAD agora está no início do ID,
+que identifica nosso commit.
+
+> Além do comando revert, que nos permite reverter uma mudança mantendo o commit e criando um novo,
+> temos o comando reset para quando queremos apagar um determinado commit, excluí-lo do histórico 
+> porque ele não faz mais sentido.
+> Nós apresentamos essas duas situações: em uma delas estamos revertendo um commit, 
+> na outra estamos apagando um commit. Mas há uma terceira situação possível.
+</p>
+
 
 <h2> git reset - Resetando um commit </h2>
 

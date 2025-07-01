@@ -1,0 +1,75 @@
+<h1> Git Revert - Desfazendo um commit</h1>
+
+<p>
+    Cada commit representa uma versão do código, que fica registrada no histórico.
+    Conhecemos o git-log e conseguimos conferir todo o histórico de versões.
+    E, eventualmente, vamos querer voltar no tempo, pois alguém pode pedir para desfazer uma alteração.
+
+    poderíamos entrar no site do GitHub, clicar na lista do log para ver os commits e encontrar qual foi 
+    o commit que fez essa alteração.  Lembre-se de que é possível detalhar o que aquele 
+    commit fez no código e quais arquivos foram modificados
+
+    Vamos abrir o VS Code e, naquela ferramenta do GitHub que estávamos utilizando no próprio VS Code, 
+    para abrir o log, aquele histórico dos nossos commits. 
+    A ferramenta é a "Source Control", no terceiro botão do menu lateral esquerdo.
+
+Clicando nessa ferramenta, temos o menu de três pontos 
+(botão "Views and More Actions"). Vamos clicar nele e verificar se temos a opção de log.
+ Procurando nas opções, não vemos nenhuma que mostre nosso histórico de commits.
+
+Começamos a usar essa integração do Visual Studio Code com o Git,
+ mas nem todos os comandos estão disponíveis via menu. Os mais comuns, como ver o status, 
+ qual arquivo foi modificado, fazer um commit, ADD, push, pull, são exibidos.
+ Mas, se quisermos executar um log ou outros comandos mais avançados,
+ e que não são tão comuns,  o VS Code não mostra. 
+ <strong> Sendo assim, teremos que usar o terminal novamente. </strong>
+
+ vamos rodar o comando git log, que já conhecemos. 
+ > git log
+ Como vimos anteriormente,  esse comando traz algumas informações dos nossos commits. 
+ Cada commit possui um ID, o qual identifica esse commit de maneira única.
+ O ID único é a maneira pela qual o Git diferencia cada commit. 
+ É como se fosse um ID de registro no banco de dados.  
+ Precisamos saber qual é o commit que queremos desfazer e, para isso, usaremos esse ID.
+ então vamos copiar o ID dele (o código de letras e números ao lado de "commit").
+ ex. commit 2ad48c068dc9677fb57efec70620700410f976b0
+ Em seguida, pressionamos a tecla "Q" para retornar ao nosso terminal. 
+ O comando para reverter um commit é o git revert, passando ao lado o ID do commit a ser desfeito.
+ > git revert 2ad48c068dc9677fb57efec70620700410f976b0
+
+Executando o comando git revert, é aberta uma pequena janela no topo da tela. Isso acontece porque o git revert
+é o comando responsável  por realizar o processo de identificar o commit pelo ID passado como parâmetro, 
+analisar cada alteração feita por ele e desfazer essas alterações sozinho.
+Entretanto, o revert não desfaz as alterações modificando apenas os arquivos. 
+Ele cria um novo commit para registrar esse revert.
+ o revert já nos fornece uma mensagem para esse novo commit,
+ dizendo que realizou um revert e traz a mensagem do commit original,
+  por exemplo, além do ID desse commit.
+
+Revert "removendo foto"
+This reverts commit 2ad48c068dc9677fb57efec70620700410f976b0.
+
+Fechando esta janela, essa mensagem já ficará salva para o novo commit.
+
+Agora, vamos executar o comando git log no terminal para verificar o que aconteceu.
+
+Na lista de commits, foi retornado esse novo commit no topo da lista,
+ indicando que ocorreu um revert do commit. 
+
+na verdade, o revert não apaga o commit original. O que ele faz é criar um novo commit que efetua uma 
+espécie de "Ctrl + Z" no commit original. Todos os arquivos modificados pelo commit original 
+têm suas alterações desfeitas, mas o revert fica registrado no histórico.
+
+No entanto, como é um novo commit, ele está apenas no nosso repositório local. 
+Portanto, quisermos enviá-lo para o GitHub, será necessário sincronizar, 
+rodando novamente o seguinte comando no terminal:
+
+    git push origin main
+
+Com isso,sincronizamos e enviamos esse commit de 
+revert para o repositório remoto, permitindo que outras pessoas possam baixá-lo.
+
+Nós fizemos o revert, desfizemos a alteração de um determinado commit. O próprio git se encarregou de olhar cada arquivo, 
+desfazer as respectivas alterações e registrar isso no histórico, revertendo o código para a versão anterior.
+
+</p>

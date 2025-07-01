@@ -310,7 +310,7 @@ no github
 Ao clicarmos no link dos commits, no canto superior direito, acessamos o histórico e notamos que ele mostra o commit de alteração também mostra o  commit do outro colaborador, e o commit que resolveu esse conflito dos dois commits anteriores.
 é assim que funciona quando há um conflito: o Git marca no código, nós resolvemos o conflito fazendo um novo commit, e então tudo fica em ordem no repositório,
 
-<h1> Git Revert - Desfazendo um commit</h1>
+<h2> Git Revert - Desfazendo um commit</h2>
 
 <p>
     Cada commit representa uma versão do código, que fica registrada no histórico.
@@ -362,11 +362,9 @@ Revert "removendo foto"
 This reverts commit 2ad48c068dc9677fb57efec70620700410f976b0.
 
 Fechando esta janela, essa mensagem já ficará salva para o novo commit.
-
 Agora, vamos executar o comando git log no terminal para verificar o que aconteceu.
-
 Na lista de commits, foi retornado esse novo commit no topo da lista,
- indicando que ocorreu um revert do commit. 
+indicando que ocorreu um revert do commit. 
 
 na verdade, o revert não apaga o commit original. O que ele faz é criar um novo commit que efetua uma 
 espécie de "Ctrl + Z" no commit original. Todos os arquivos modificados pelo commit original 

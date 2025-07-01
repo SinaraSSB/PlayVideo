@@ -295,3 +295,12 @@ Ao clicarmos no Pull, ele tenta sincronizar e mostra uma mensagem de erro. Inclu
 se houver um conflito no mesmo arquivo e na mesma linha, 
 ele não consegue distinguir qual versão manter.
 O Git não escolhe uma versão, ele nos deixa decidir qual versão deve ser mantida
+
+O Git detecta que houve um conflito e até mostra um botão azul, no canto inferior direito da tela, escrito "Resolve in Merge Editor". Se clicarmos nesse botão, poderemos resolver o conflito em uma ferramenta de edição de conflitos.
+
+depois de resolver o conflito precisamos fazer o Commit novamente e
+depois o botão de sincronização, para enviar 
+
+no github 
+Ao clicarmos no link dos commits, no canto superior direito, acessamos o histórico e notamos que ele mostra o commit de alteração também mostra o  commit do outro colaborador, e o commit que resolveu esse conflito dos dois commits anteriores.
+é assim que funciona quando há um conflito: o Git marca no código, nós resolvemos o conflito fazendo um novo commit, e então tudo fica em ordem no repositório,

@@ -461,3 +461,30 @@ que identifica nosso commit.
 > Nós apresentamos essas duas situações: em uma delas estamos revertendo um commit, 
 > na outra estamos apagando um commit. Mas há uma terceira situação possível.
 </p>
+
+<h2> Arquivos que queremos que o Git Ignore</h2>
+
+No caso do nosso projeto, criamos um repositóroi, que é a pasta principal do projeto. 
+Todos os arquivos contidos nela, como style.css, index.html, app.js, até mesmo os diretórios,
+como a pasta .img e todos os arquivos internos dela, serão rastreados pelo Git quando
+ usamos o comando git add..
+
+No entanto, pode haver uma pasta ou arquivo específico que desejamos que o Git ignore. Talvez seja um arquivo ou diretório necessário para a execução do projeto localmente, mas que não faz sentido compartilharmos com outras pessoas. Cada uma terá seu arquivo ou diretório específico, portanto, não queremos enviar para o GitHub.
+
+Porém, se adotarmos essa estratégia, teríamos que ter cuidado ao realizar um commit para não usar git add., 
+caso contrário, o Git incluiria automaticamente o diretório que gostaríamos de ignorar.
+ E então, teríamos que ficar adicionando individualmente cada arquivo, o que não seria nada produtivo.
+
+Existe um recurso que nos permite criar um arquivo para informar ao Git quais diretórios
+ e arquivos do projeto ele deverá ignorar. Esse arquivo é chamado de .gitignore. 
+ Podemos criar um arquivo com esse nome no nosso projeto.
+
+ No Visual Studio Code, criaremos um novo arquivo. O nome desse arquivo deve ser .gitignore, 
+ com um ponto no início, pois será um arquivo oculto. Após criar o arquivo .gitignore, 
+ incluiremos nele quais arquivos e diretórios do projeto queremos ignorar.
+
+ Por exemplo, vamos supor que temos uma pasta chamada temp/ no projeto, que é uma pasta temporária, com arquivos temporários. Estamos adicionando essa pasta no arquivo .gitgnore para que o Git ignore esse arquivo. Se tivermos outros arquivos e diretórios, cada um deles estaria separado por linhas.
+
+Portanto, na linha abaixo, poderíamos colocar arquivo.txt passando um nome específico ou padrão,
+ por exemplo, *.css. Nós usaremos apenas o temp/. Com isso, estamos dizendo, basicamente, 
+ para o Git: "Ignore a pasta temp do projeto".

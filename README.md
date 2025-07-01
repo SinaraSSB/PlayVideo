@@ -12,17 +12,11 @@
 
 > `git branch -M main `
 
-> ```console
-git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
-```
+> git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
 
-> ```console
-git remote add origin https://github.com/SinaraSSB/playvideo.git  
-```
+> git remote add origin https://github.com/SinaraSSB/playvideo.git  
 
-> ```console
-git push -u origin main </p>
-```
+> git push -u origin main </p>
 
 <hr>
 

@@ -183,6 +183,9 @@ Primeiro, copiamos o hash do commit mais antigo que desejamos comparar, e colamo
 
 O comando completo fica git diff, o commit mais antigo, "..", o commit mais novo. Ao teclarmos "Enter", ele mostra todas as alterações.
 
+---
+---
+
 <h2> git log </h2>
 
 `git log ` 

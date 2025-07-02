@@ -645,3 +645,22 @@ Nós podemos criar um "Gist" e, assim que a criação for realizada, será gerad
 Ao final da página, existe um botão verde, "Create secret gist", que serve para criarmos o Gist. E ele também tem a opção de ser um Gist público ou secreto. 
 Funciona da mesma forma que o repositório. Se for público, pessoas podem acessar os Gists que criamos. Se for privado, somente a pessoa responsável pelo arquivo pode compartilhá-lo com outras pessoas. O Gist privado não aparece na página do usuário no GitHub.
 O endereço que está na barra de endereços do navegador é o que compartilharemos com outras pessoas
+
+--- 
+--- 
+<h2>Branches</h2>
+<h3>Ramificando o trabalho</h3>
+    Temos nosso projeto desenvolvido e queremos começar a trabalhar em outra funcionalidade. 
+    Para isso, podemos criar uma ramificação, um galho na nossa árvore. Isso é o que chamamos de branch.
+    Se digitarmos o comando git branch ele vai mostrar quais são as branches, isto é, 
+    quais são as ramificações existentes no nosso trabalho.
+    git branch 
+    Por padrão, só temos a branch main, que o Visualizing Git chama de master. Antigamente, 
+    a branch principal se chamava master, mas essa nomenclatura padrão foi alterada para main. 
+    Sendo assim, hoje em dia, a branch padrão se chama main.Se quisermos renomear a master para main, 
+    usamos o comando abaixo:
+    git branch -m master main
+    Se quisermos remover alguma branch, caso tenhamos uma lista de várias branches, podemos usar o 
+    comando git branch -d seguido do nome da branch que queremos remover. Por exemplo: 
+    git branch -d master 
+ 

@@ -164,6 +164,7 @@ Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no term
 <h2> git log </h2>
 
 `git log ` 
+
 comando em que conseguimos identificar quais commits foram realizados no projeto e quem fez.
 
 Ao executá-lo é exibido o histórico dos commits que foram feitos ao longo do projeto.
@@ -232,6 +233,74 @@ Com --format ou --pretty, podemos exibir o commit da maneira que desejar.
 Por exemplo, utilizarmos --format="" e dentro das aspas digitar %H %an.
 
 `git log --format="%H %an"`
+
+### Vendo as alterações - 
+
+git log --oneline
+
+#### Analisando um commit especifico
+
+para ver as alterações realizadas em um commit específico, independentemente de quem o tenha feito. 
+
+Para isso, copiaremos o hash correspondente e digitaremos git show, seguido do respectivo hash.
+para que nos apresente o conteúdo e os detalhes desse commit.
+
+`git show 2ad48c0`
+
+O comando git show nos proporcionará uma exibição semelhante ao git log -p, 
+porém focado apenas no commit em questão, não em todo o registro.
+
+são apresentados o hash do commit, o nome do autor, a data, a mensagem de commit e o diff correspondente, que detalha as alterações realizadas. Dessa forma, podemos navegar pelo conteúdo, descendo para visualizar as mudanças específicas. 
+
+Observe como o comando git show é bastante simples, ele exibe o diff para nós. Novamente, basta pressionar "Q" para sair. Um detalhe interessante é que, ao digitarmos git show --help, podemos entender melhor como o comando funciona.
+
+`git show --help`
+
+O Git segue o padrão de nome do comando seguido de --help, com isso,
+ podemos solicitar ajuda em caso de dúvidas em um determinado comando.
+
+`NAME
+    git-show - Show various types of objects
+    
+SYNOPSIS
+    git show [<options>] [<object>…]`
+    
+Isso nos mostra que o git show espera algumas opções e objetos, como um commit, por exemplo.
+
+Outra possibilidade é que o objeto seja algo diferente, mas para nossos propósitos, vamos focar no commit. 
+Porém, antes de prosseguir, deixe-me explicar brevemente o formato de sinopse apresentado pelo help.
+
+`git show [<options>] [<object>…]`
+
+Sempre que algo está entre colchetes, isso indica que é opcional.
+
+Você percebeu que apenas digitamos git show seguido pelo nome do nosso hash do commit, certo? Não especificamos nenhum opcional. Isso significa que, além das opções que já discutimos, esse objeto, o commit, também é opcional.
+Se esse objeto não for informado, o help indica que ele "defaults to head" (assume o padrão como sendo o "head"). Portanto, ao pressionar "Q" para sair e digitar git log novamente, podemos destacar um detalhe interessante, 
+O nosso último commit, do lado do hash do commit, temos (HEAD -> main, origin/main, origin/HEAD)
+
+Primeiro, main é o nome de um branch e vamos falar sobre branch mais adiante. E esse origin, já sabemos que é o nosso repositório remoto, é lá no GitHub. Portanto, esse origin/main significa que esse commit também é onde está o nosso branch main no repositório remoto.
+
+Basicamente, o que isso significa é que este commit representa o estado atual da nossa branch main, ou seja, é o estado atual da "main" no nosso repositório remoto.
+
+Agora, o "HEAD" e o "origin/HEAD", que significam a mesma coisa que "HEAD" no repositório remoto, referem-se ao estado atual no repositório remoto. O que isso implica? "HEAD" representa simplesmente o último commit, ou seja, o commit atual do qual estamos trabalhando.
+
+**HEAD: commit mais recente da branch atual**
+
+Assim, como "mudanças no título e gitignore" é o último commit, ou seja, o mais recente, ele é o nosso HEAD. **Portanto, HEAD é essencialmente um sinônimo, um ponteiro, um apelido para o nosso último commit, o mais recente estado do nosso projeto no momento.**
+
+Então, por que toda essa explicação sobre "HEAD"? 
+Porque ao digitar apenas git show, sem mais nada, o Git mostrará os detalhes do último "commit".
+
+`git show`
+
+
+Assim, mais uma vez, o comando git show exibe os detalhes de um ou mais registros de alterações (commits),
+ e se nenhum registro for especificado, ele por padrão seleciona o cabeçalho (HEAD), que é o último registro
+ de alterações.
+
+Portanto, sempre que encontrarem referências ao HEAD em documentação, artigos, textos ou similares, é bastante simples. Ele é apenas um alias para o registro de alterações mais recente da sua posição atual. Então, entendemos o funcionamento do git show. Ele exibe os detalhes do último registro de alterações ou de um registro específico.
+
+---
 
 <h3> Mensagens dos Commits </h3>
 

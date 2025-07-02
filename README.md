@@ -186,6 +186,7 @@ O comando completo fica git diff, o commit mais antigo, "..", o commit mais novo
 >O comando git diff, por padrão, compara as modificações que foram feitas mas ainda não foram adicionadas para serem commitadas, mostrando a diferença entre o estado atual do projeto e o último commit. Quando utilizamos git add em um arquivo, e em seguida executamos git diff, percebemos que não é mais exibido nenhum resultado. Por quê? 
 >ele está em um estado que chamamos de stage (palco), ou seja, ele foi colocado em um local onde os commits são realizados. Portanto, o arquivo não está mais no estado anterior, fora do stage, onde o diff normalmente aponta. Assim, o comando git diff não mostrará mais diferenças para esse arquivo. Se rodarmos o git diff, não obtivemos nenhum retorno.
 
+o comando git diff revela a diferença entre dois estados. Por padrão, ele compara o último commit com as alterações presentes no momento atual, mas também podemos especificar a diferença entre dois commits, ou entre um commit e o estado atual do projeto, ou seja, nosso head.
 
 
 ---

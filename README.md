@@ -172,6 +172,8 @@ Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no term
 
 `git diff`
 
+`git diff > difs.txt`
+
 > o objetivo é visualizar todas as alterações antes de prosseguir com o commit. Ao executar git diff, são exibidas as diferenças entre dois estados. 
 **Por padrão, os estados comparados são as modificações que foram realizadas e ainda não foram adicionadas ao commit, e o último commit realizado, também conhecido como head. Esse comando exibe a diferença entre o último commit e o que temos modificado no arquivo.**
 

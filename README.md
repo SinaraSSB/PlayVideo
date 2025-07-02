@@ -1,8 +1,8 @@
 <h1> --- Iniciando o Repositório Local ---- </h1>
 <h3>Curso de Git e GitHub: compartilhando e colaborando em projetos </h3>
----
 
-<p>
+
+---
 
 > `git init `
 
@@ -12,11 +12,11 @@
 
 > `git branch -M main `
 
-> git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>
+> `git remote add origin git@github.com:SinaraSSB/PlayVideo.git   <i>ou</i>`
 
-> git remote add origin https://github.com/SinaraSSB/playvideo.git  
+> `git remote add origin https://github.com/SinaraSSB/playvideo.git  `
 
-> git push -u origin main </p>
+> `git push -u origin main `
 
 <hr>
 
@@ -160,6 +160,28 @@ Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no term
  > git push origin main
 
 </p>
+
+---
+
+## Explorando outros comandos / git Status / git diff
+
+`git status`
+
+> Este comando nos indica em qual ramificação (branch) estamos e se há algo para adicionar e realizar um commit. 
+
+
+`git diff`
+
+> o objetivo é visualizar todas as alterações antes de prosseguir com o commit. Ao executar git diff, são exibidas as diferenças entre dois estados. 
+**Por padrão, os estados comparados são as modificações que foram realizadas e ainda não foram adicionadas ao commit, e o último commit realizado, também conhecido como head. Esse comando exibe a diferença entre o último commit e o que temos modificado no arquivo.**
+
+Para analisar a diferença entre esses dois commits específicos, precisamos incluir os três commits em nossa análise. Podemos fazer isso utilizando o comando git diff.
+
+Primeiro, copiamos o hash do commit mais antigo que desejamos comparar, e colamos esse hash seguido de "..": git diff 5880fc1... Em seguida, copiamos o hash do commit mais recente que queremos comparar, e o colamos após "..".
+
+`git diff 5880fc1..5bc160e`
+
+O comando completo fica git diff, o commit mais antigo, "..", o commit mais novo. Ao teclarmos "Enter", ele mostra todas as alterações.
 
 <h2> git log </h2>
 

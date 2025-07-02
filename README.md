@@ -163,7 +163,6 @@ Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no term
 
 <h2> git log </h2>
 
-<p>
 `git log ` 
 comando em que conseguimos identificar quais commits foram realizados no projeto e quem fez.
 
@@ -174,18 +173,21 @@ Logo acima temos o commit mais atual,  que é o que acabamos de fazer.
 Com esse comando, visualizamos nossa lista de commits, o registro de versionamento. 
 Para sair dessa visualização do git log, simplesmente pressionamos a tecla "Q". 
 
-</p>
+
 --- 
-<h3> Criar um Arquivo .txt com os Logs de Commits </h3>
-<p>
+
+### Criar um Arquivo .txt com os Logs de Commits 
+
 Execute o Comando git log para ver os registros de commits
 No terminal, execute: 
+
 `git log > logs.txt `
+
 para criar um arquivo chamado logs.txt contendo os logs de commits
-</p>
+
 ---
 <h3>Alterando a visualização do log</h3>
-<p>
+
 para visualizar apenas as mensagens dos commits, de forma simplificada. Não estamos interessados em quem foi o autor do commit, em qual branch ele está, ou outros detalhes. Não desejamos verificar o hash completo do commit, apenas uma lista das mensagens, de forma mais compacta, linha por linha.
 digitaremos git log, mas com a flag --oneline.
 
@@ -201,14 +203,36 @@ Isso é bastante semelhante ao que vemos no GitHub
 --- 
 
 <h3>Visualizando a alteração do commit</h3>
-se for preciso examinar o commit e suas alterações, não apenas sua mensagem, mas também seu conteúdo. 
-digitamos o comando: 
+se for preciso examinar o commit e suas alterações, não apenas sua mensagem, 
+mas também seu conteúdo. digitamos o comando: 
+
 `git log -p`
+
 Essa opção -p vai nos fornecer, além das informações padrão, o hash completo, o autor ou autora, a data e a mensagem do commit. Além disso, ele mostrará um diff, que é essencialmente um formato que o git utiliza para exibir as alterações de um commit específico.
 Ele diz que as linhas que começam com "-" (---- a/index.html), significa que foram linhas que foram removidas. E as linhas que começam com "+" (+++ b/index.html), são as linhas adicionadas.
+
 ---
->Em suma, temos o git log --online para visualizar o log de forma compacta. Temos também o git log -p para ver >isso de forma expandida, com as alterações.
+
+>Em suma, temos o git log --online para visualizar o log de forma compacta. Temos também o git log -p para ver  isso de forma expandida, com as alterações.
+
 ---
+
+### Outras formas de exibição do log
+
+E várias outras opções também, como o git log --graph, que exibirá uma linha do nosso log, e isso será ainda mais útil quando falarmos um pouco sobre branches.
+
+Mas, essencialmente, se percorro isso até a parte em que temos um merge, que foi feito no curso anterior, percebemos que ele representa graficamente uma linha do tempo se desviando para outro ponto e depois retornando à nossa linha principal.
+
+Note que à esquerda há uma linha vertical, e a partir do ponto de merge, outra linha se ramifica dessa vertical, estendendo-se até o commit do Rodrigo. Isso ficará um pouco mais claro, mas com o uso de --graph, conseguimos visualizar o log de uma forma mais visual.
+
+Há ainda uma opção interessante, que é o --pretty ou --format. Ambos são sinônimos.
+`git log --pretty 
+git log --format`
+Com --format ou --pretty, podemos exibir o commit da maneira que desejar. 
+Por exemplo, utilizarmos --format="" e dentro das aspas digitar %H %an.
+
+`git log --format="%H %an"`
+
 <h3> Mensagens dos Commits </h3>
 
 <p> Apesar de não existir uma regra universal para a escrita das mensagens de commit, algumas boas práticas podem ser seguidas para garantir que outras pessoas, e até mesmo você no futuro, entendam que alterações foram feitas e por quê.

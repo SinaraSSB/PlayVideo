@@ -163,29 +163,52 @@ Em seguida, clicamos com o botão direito do mouse e selecionamos "Abrir no term
 
 <h2> git log </h2>
 
-<p> comando em que conseguimos identificar quais commits foram realizados no projeto e quem fez.
+<p>
+`git log ` 
+comando em que conseguimos identificar quais commits foram realizados no projeto e quem fez.
 
 Ao executá-lo é exibido o histórico dos commits que foram feitos ao longo do projeto.
+Se analisarmos o retorno,  Identificamos o nome do autor, data seguido da mensagem. 
+Logo acima temos o commit mais atual,  que é o que acabamos de fazer. 
 
-Se analisarmos o retorno, retonhamos o primeiro commit que o Rodrigo fez para subir o projeto inicial.
- Identificamos o nome do autor, data seguido da mensagem. Logo acima temos o commit mais atual
- que é o que acabamos de fazer.  </p>
- 
- --- 
+Com esse comando, visualizamos nossa lista de commits, o registro de versionamento. 
+Para sair dessa visualização do git log, simplesmente pressionamos a tecla "Q". 
 
-<h3> VS -  Alertas ao lado do Nome do arquivo </h3>
+</p>
+--- 
+<h3> Criar um Arquivo .txt com os Logs de Commits </h3>
+<p>
+Execute o Comando git log para ver os registros de commits
+No terminal, execute: 
+`git log > logs.txt `
+para criar um arquivo chamado logs.txt contendo os logs de commits
+</p>
+---
+<h3>Alterando a visualização do log</h3>
+<p>
+para visualizar apenas as mensagens dos commits, de forma simplificada. Não estamos interessados em quem foi o autor do commit, em qual branch ele está, ou outros detalhes. Não desejamos verificar o hash completo do commit, apenas uma lista das mensagens, de forma mais compacta, linha por linha.
+digitaremos git log, mas com a flag --oneline.
 
- <p>  Quando estamos trabalhando em um projeto utilizando o versionamento Git e a IDE VSCode, 
- ao adicionar ou alterar algum arquivo aparece uma sinalização ao lado do nome desses arquivos. 
+  `git log --oneline`
 
-<strong> M: A letra M  </strong>representa o estado Modified, do português modificado. Isso significa que o arquivo 
- já existia no repositório, mas que recebeu alguma modificação que ainda não foi registrada no Git.
+Isso nos permitirá visualizar o log de commits de forma muito mais resumida.
 
-<strong> U: A letra U </strong>representa o estado Untracked, do português não rastreado. Isso significa que o arquivo 
-ainda não existia no repositório e que ainda não teve seu registro (commit) feito no Git. </P>
+Com git log --oneline, teremos nosso histórico de commits exibido com os hashes reduzidos, mostrando apenas os primeiros caracteres do hash. Isso já é suficiente para identificarmos algum commit.
 
-<hr>
+Isso é bastante semelhante ao que vemos no GitHub
 
+</p>
+--- 
+
+<h3>Visualizando a alteração do commit</h3>
+se for preciso examinar o commit e suas alterações, não apenas sua mensagem, mas também seu conteúdo. 
+digitamos o comando: 
+`git log -p`
+Essa opção -p vai nos fornecer, além das informações padrão, o hash completo, o autor ou autora, a data e a mensagem do commit. Além disso, ele mostrará um diff, que é essencialmente um formato que o git utiliza para exibir as alterações de um commit específico.
+Ele diz que as linhas que começam com "-" (---- a/index.html), significa que foram linhas que foram removidas. E as linhas que começam com "+" (+++ b/index.html), são as linhas adicionadas.
+---
+>Em suma, temos o git log --online para visualizar o log de forma compacta. Temos também o git log -p para ver >isso de forma expandida, com as alterações.
+---
 <h3> Mensagens dos Commits </h3>
 
 <p> Apesar de não existir uma regra universal para a escrita das mensagens de commit, algumas boas práticas podem ser seguidas para garantir que outras pessoas, e até mesmo você no futuro, entendam que alterações foram feitas e por quê.
@@ -221,8 +244,9 @@ através dessa cadeia de commits, o Git registra um histórico completo de todos
 Caso queira conhecer melhor sobre esse processo, acesse a documentação oficial do Git.
  https://git-scm.com/book/pt-br/v2/Come%C3%A7ando-O-B%C3%A1sico-do-Git 
 </p>
+---
 
-<h2> Adicionando colaboradores ao projeto</h2>
+<h3> Adicionando colaboradores ao projeto</h3>
 Se quisermos que outras pessoas colaborem nesse projeto, 
 é preciso adicioná-las manualmente no projeto. 
 Logamos no GitHub e acessamos o repositório.
@@ -251,6 +275,21 @@ Co-authored-by: NOME <nome@email.com>
 Co-authored-by: OUTRO-NOME <outro@email.com>"
 
 https://docs.github.com/pt/pull-requests/committing-changes-to-your-project/creating-and-editing-commits/creating-a-commit-with-multiple-authors
+
+---
+---
+<h2> VSCode -  Alertas ao lado do Nome do arquivo </h2>
+
+ <p>  Quando estamos trabalhando em um projeto utilizando o versionamento Git e a IDE VSCode, 
+ ao adicionar ou alterar algum arquivo aparece uma sinalização ao lado do nome desses arquivos. 
+
+<strong> M: A letra M  </strong>representa o estado Modified, do português modificado. Isso significa que o arquivo 
+ já existia no repositório, mas que recebeu alguma modificação que ainda não foi registrada no Git.
+
+<strong> U: A letra U </strong>representa o estado Untracked, do português não rastreado. Isso significa que o arquivo 
+ainda não existia no repositório e que ainda não teve seu registro (commit) feito no Git. </P>
+
+<hr>
 
 ---
 
@@ -423,14 +462,7 @@ que identifica nosso commit.
 > na outra estamos apagando um commit. Mas há uma terceira situação possível.
 </p>
 
---- 
-# Criar um Arquivo .txt com os Logs de Commits
 
-Execute o Comando git log para ver os registros de commits
-No terminal, execute: 
-`git log > logs.txt `
-para criar um arquivo chamado logs.txt contendo os logs de commits
----
 
 <h2> Arquivos que queremos que o Git Ignore</h2>
 

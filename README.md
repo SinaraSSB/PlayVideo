@@ -654,12 +654,16 @@ O endereço que está na barra de endereços do navegador é o que compartilhare
     Para isso, podemos criar uma ramificação, um galho na nossa árvore. Isso é o que chamamos de branch.
     Se digitarmos o comando git branch ele vai mostrar quais são as branches, isto é, 
     quais são as ramificações existentes no nosso trabalho.
-    git branch 
+
+ `   git branch `
+
     Por padrão, só temos a branch main, que o Visualizing Git chama de master. Antigamente, 
     a branch principal se chamava master, mas essa nomenclatura padrão foi alterada para main. 
     Sendo assim, hoje em dia, a branch padrão se chama main.Se quisermos renomear a master para main, 
     usamos o comando abaixo:
-    git branch -m master main
+
+`  git branch -m master main  `
+    
     Se quisermos remover alguma branch, caso tenhamos uma lista de várias branches, podemos usar o 
     comando git branch -d seguido do nome da branch que queremos remover. Por exemplo: 
     git branch -d master 

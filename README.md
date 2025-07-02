@@ -648,8 +648,8 @@ O endereço que está na barra de endereços do navegador é o que compartilhare
 
 --- 
 --- 
-<h2>Branches</h2>
-<h3>Ramificando o trabalho</h3>
+## Branches
+### Ramificando o trabalho
     Temos nosso projeto desenvolvido e queremos começar a trabalhar em outra funcionalidade. 
     Para isso, podemos criar uma ramificação, um galho na nossa árvore. Isso é o que chamamos de branch.
     Se digitarmos o comando git branch ele vai mostrar quais são as branches, isto é, 
@@ -657,14 +657,33 @@ O endereço que está na barra de endereços do navegador é o que compartilhare
 
  `   git branch `
 
-    Por padrão, só temos a branch main, que o Visualizing Git chama de master. Antigamente, 
-    a branch principal se chamava master, mas essa nomenclatura padrão foi alterada para main. 
-    Sendo assim, hoje em dia, a branch padrão se chama main.Se quisermos renomear a master para main, 
-    usamos o comando abaixo:
+    Por padrão,  Antigamente, a branch principal se chamava master, 
+    mas essa nomenclatura padrão foi alterada para main. 
+    Sendo assim, hoje em dia, a branch padrão se chama main.
+    Se quisermos renomear a main para master, usamos o comando abaixo:
 
-`  git branch -m master main  `
+`  git branch -m  main master `
     
     Se quisermos remover alguma branch, caso tenhamos uma lista de várias branches, podemos usar o 
     comando git branch -d seguido do nome da branch que queremos remover. Por exemplo: 
-    git branch -d master 
+
+  `  git branch -d master `
  
+### Criando ramificações no projeto
+
+Se digitarmos o comando git branch, ele vai retornar que só temos a branch main:
+
+`git branch`
+
+Poderíamos usar o comando git branch seguido de uma nova branch que quisermos, 
+referente a qualquer nova funcionalidade. Porém, se quisermos criar uma branch e já mover para ela,
+podemos usar dois comandos. O primeiro é o git checkout -b seguido do nome da nova branch nova-funcionalidade.
+
+`git checkout -b nova-funcionalidade`
+
+Além desse comando mais antigo, podemos utilizar o **git switch,** também seguido do nome da branch desejada. "Switch" significa trocar, ou seja, esse comando basicamente alterna entre branches.
+
+Porém, se digitarmos simplesmente git switch nova-funcionalidade, será informado que essa branch não existe. Então, vamos executar git switch -c nova-funcionalidade (-c referente a "create").
+
+`git switch -c nova-funcionalidade`
+

@@ -488,7 +488,29 @@ Existe um recurso que nos permite criar um arquivo para informar ao Git quais di
 Portanto, na linha abaixo, poderíamos colocar arquivo.txt passando um nome específico ou padrão,
  por exemplo, *.css. Nós usaremos apenas o temp/. Com isso, estamos dizendo, basicamente, 
  para o Git: "Ignore a pasta temp do projeto".
+> .gitignore
+> *.doc 
+> temp/
+> PastaTXT/  
 
-` *.doc
-temp/
-PastaTXT/ ` 
+Ao invés de criarmos o .gitignore manualmente, precisando lembrar quais são os arquivos e diretórios daquela linguagem, daquela tecnologia, existem sites que nos auxiliam nessa tarefa.
+Existem sites geradores de .gitignore para cada tecnologia.
+
+Um desses auxiliadores é o site gitignore.io, que é um site utilitário.
+ Nele, indicamos a tecnologia ou a linguagem de programação, por exemplo, Java, 
+ e apertamos o botão "criar". Com isso, ele retorna como seria um .gitignore para um projeto com Java.
+
+---
+# Compartilhar trechos no código
+
+ GitHub oferece um recurso para quando desejamos compartilhar trechos de códigos com outras pessoas, sem a necessidade de criar um repositório e realizar todo o processo de commits que realizamos.
+
+Abrindo o site do GitHub, no ícone de "+ (mais)", no canto superior direito, além da opção de criar um novo repositório, encontramos outras opções. Dentre elas, temos uma chamada "New Gist".
+
+Ao selecioná-la, seremos direcionados para um formulário. A ferramenta GitHub Gist foi desenvolvida pelo próprio GitHub para compartilhamento de códigos. A descrição inclusive menciona "compartilhe códigos de maneira instantânea, comentários ou trechos de códigos pontualmente".
+
+Nós podemos criar um "Gist" e, assim que a criação for realizada, será gerada uma URL que copiaremos e compartilharemos com outras pessoas.
+
+Ao final da página, existe um botão verde, "Create secret gist", que serve para criarmos o Gist. E ele também tem a opção de ser um Gist público ou secreto. 
+Funciona da mesma forma que o repositório. Se for público, pessoas podem acessar os Gists que criamos. Se for privado, somente a pessoa responsável pelo arquivo pode compartilhá-lo com outras pessoas. O Gist privado não aparece na página do usuário no GitHub.
+O endereço que está na barra de endereços do navegador é o que compartilharemos com outras pessoas

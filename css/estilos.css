@@ -34,7 +34,7 @@ p {
 /* CABEÇALHO */
 
 .cabecalho__container {
-    background-color: rgb(156, 152, 152);
+    background-color: whitesmoke;
     height: 80px;
     width: 100%;
     padding: 0 25px;

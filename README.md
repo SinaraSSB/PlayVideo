@@ -807,3 +807,7 @@ git branch -d nova-funcionalidade
 
 >O GitHub possui uma funcionalidade chamada Pull requests, que é uma sugestão de alteração em determinado repositório. Outras ferramentas, como o GitLab, podem chamar essa mesma ferramenta de Merge requests.
 Essa sugestão de alteração é, de forma resumida, a abordagem que adotamos ao colaborar com equipes para adicionar novas funcionalidades ou corrigir alterações. Ao invés de manualmente mesclarmos o código de nossa branch com a main, nós criamos um pull request (ou merge request), pois dessa forma a alteração fica mais visível para toda a equipe e permite que outras pessoas possam revisar esse trabalho.
+
+## comando mágico chamado git rebase
+
+[git rebase](https://cursos.alura.com.br/course/git-github-dominando-controle-versao-codigo/task/150397)

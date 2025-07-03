@@ -653,6 +653,11 @@ O endereço que está na barra de endereços do navegador é o que compartilhare
 
 ## Ramificando o trabalho
 
+
+# Branches
+
+## Ramificando o trabalho
+
     Temos nosso projeto desenvolvido e queremos começar a trabalhar em outra funcionalidade. 
     Para isso, podemos criar uma ramificação, um galho na nossa árvore. Isso é o que chamamos de branch.
     Se digitarmos o comando git branch ele vai mostrar quais são as branches, isto é, 
@@ -734,22 +739,4 @@ Mais uma vez, o código aparecerá atualizado com o que adicionamos.
 
 >Note que fizemos o push de nova-funcionalidade, e no GitHub, ele exibe uma mensagem que indica que podemos criar uma pull request a partir da nossa nova branch.
 
-<<<<<<< HEAD
 >O GitHub já identificou que existe uma nova branch e que, em algum momento, vamos querer unir a branch nova-funcionalidade com a main, que é a branch principal.
-=======
->O GitHub já identificou que existe uma nova branch e que, em algum momento, vamos querer unir a branch nova-funcionalidade com a main, que é a branch principal.
-
-Basicamente, queremos unir o trabalho da branch nova-funcionalidade à branch main.
-
-Queremos pegar tudo o que foi feito em nova-funcionalidade e trazer para o ramo principal master. Existe um comando que faz isso de forma bastante simples: *o git merge ("mesclar" em inglês).*
-
-Você se lembra que quando fizemos o pull e o push com dois usuários diferentes, 
-chegamos nesse cenário de merge, isto é, de mescla de trabalhos. 
-
-Podemos dizer que estamos na branch main, a branch principal,
- pegar tudo o que tem na branch nova-funcionalidade e mesclar com o que já temos na main.
-
-Se fizermos o merge de nova-funcionalidade, ele vai levar a main para o mesmo local.
-
-##  linha incluída na Branch nova-func BRANCH NOVA-FUNC @@@ 
->>>>>>> nova-func

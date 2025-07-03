@@ -632,7 +632,7 @@ Um desses auxiliadores é o site gitignore.io, que é um site utilitário.
  e apertamos o botão "criar". Com isso, ele retorna como seria um .gitignore para um projeto com Java.
 
 ---
-# Compartilhar trechos no código
+##  Compartilhar trechos no código
 
  GitHub oferece um recurso para quando desejamos compartilhar trechos de códigos com outras pessoas, sem a necessidade de criar um repositório e realizar todo o processo de commits que realizamos.
 
@@ -648,8 +648,11 @@ O endereço que está na barra de endereços do navegador é o que compartilhare
 
 --- 
 --- 
-<h2>Branches</h2>
-<h3>Ramificando o trabalho</h3>
+
+# Branches
+
+## Ramificando o trabalho
+
     Temos nosso projeto desenvolvido e queremos começar a trabalhar em outra funcionalidade. 
     Para isso, podemos criar uma ramificação, um galho na nossa árvore. Isso é o que chamamos de branch.
     Se digitarmos o comando git branch ele vai mostrar quais são as branches, isto é, 
@@ -668,3 +671,60 @@ O endereço que está na barra de endereços do navegador é o que compartilhare
     comando git branch -d seguido do nome da branch que queremos remover. Por exemplo: 
     git branch -d master 
  
+## Criando uma nova ramificação
+
+git branch
+
+Poderíamos usar o comando git branch seguido de uma nova branch que quisermos, referente a qualquer nova funcionalidade. Porém, se quisermos criar uma branch e já mover para ela, podemos usar dois comandos. 
+O primeiro é o git checkout -b seguido do nome da nova branch nova-funcionalidade.
+
+git checkout -b nova-funcionalidade
+
+Além desse comando mais antigo, podemos utilizar o git switch, também seguido do nome da branch desejada. "Switch" significa trocar, ou seja, esse comando basicamente alterna entre branches.
+
+Porém, se digitarmos simplesmente git switch nova-funcionalidade, será informado que essa branch não existe. Então, vamos executar git switch -c nova-funcionalidade (-c referente a "create").
+
+git switch -c nova-funcionalidade
+
+Agora temos uma nova ramificação do nosso trabalho.
+ Podemos fechar o terminal e adicionar alguma modificação no código.
+
+git status
+
+com isso, ele mostra que estamos na branch nova-funcionalidade. 
+Vamos adicionar o arquivo index.html com o comando git add, 
+e depois adicionar um commit com a mensagem "estamos no branch nova-func".
+
+` git add index.html
+git commit -m "estamos no branch nova-func" `
+
+Se fizermos um git log agora, temos um retorno um pouco diferente.
+
+` git log`
+
+Temos o commit anterior, do merge na branch main; temos o origin/main;
+ agora o último commit é onde está o HEAD atual; e temos a branch nova-funcionalidade.
+  Repare que a branch nova-funcionalidade ainda não foi para o origin, pois não enviamos.
+  Porém, antes de enviar, vamos fazer um switch e voltar para branch main:
+
+`git switch main`
+
+A funcionalidade que estamos desenvolvendo está nessa branch, isto é, o commit existe nela, 
+não descartamos ele. Porém, voltamos a trabalhar na linha de trabalho principal main.
+
+Se voltarmos para o terminal e executarmos git log, o head terá voltado para main. 
+Então, o HEAD é onde estamos no momento, é o commit atual onde o nosso projeto está.
+
+Dito isso, vamos fazer um git switch para nova-funcionalidade:
+
+`git switch nova-funcionalidade`
+
+Mais uma vez, o código aparecerá atualizado com o que adicionamos.
+ Assim, podemos fazer o git push para o repositório remoto, ou seja, 
+ origin da branch nova-funcionalidade.
+
+`git push origin nova-funcionalidade`
+
+**Após teclar "Enter", a nova ramificação será criada e teremos uma nova linha de trabalho.**
+
+[https://git-school.github.io/visualizing-git/](https://git-school.github.io/visualizing-git/)

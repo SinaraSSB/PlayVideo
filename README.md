@@ -740,3 +740,57 @@ Mais uma vez, o código aparecerá atualizado com o que adicionamos.
 >Note que fizemos o push de nova-funcionalidade, e no GitHub, ele exibe uma mensagem que indica que podemos criar uma pull request a partir da nossa nova branch.
 
 >O GitHub já identificou que existe uma nova branch e que, em algum momento, vamos querer unir a branch nova-funcionalidade com a main, que é a branch principal.
+
+## Unindo a nova Branch na Main
+
+Criando a nova branch
+
+use: 
+  ```markdown
+  git branch newbranch  
+  git checkout newbranch
+  ```
+ou
+  `git checkout -b newbranch`   -- cria e move para ela 
+faz as alterações necessárias na nova branch
+`  git add .
+  git commit -m 'msg newbranc'`
+
+essas alterações ficam só na newbranch, 
+quando desejar juntar essas alterações a main
+
+`git checkout main
+git merge newbranch ` 
+
+resolve os conflitos e faz o commit da nova branch
+
+## Fazendo um merge commit
+Estamos no cenário onde as duas branches evoluíram de forma independente. Este é o cenário mais comum: trabalhamos na branch de alguma funcionalidade, e outras funcionalidades foram adicionadas à main, outras coisas foram feitas e já estão na linha de trabalho principal.
+
+Sendo assim, quando fizermos um git switch para main e tentarmos fazer um git merge de nova-funcionalidade, o Git vai entender que esses dois trabalhos estão independentes e não evoluíram de forma igual. Dessa forma, ele irá unir criando um novo commit automaticamente. Ele criará um novo commit de merge, ou merge commit, como normalmente é chamado nas documentações.
+
+`git switch main
+git merge nova-func`
+
+
+Com esses comandos, será aberto um editor que permite a alteração da mensagem de commit de merge. 
+No nosso caso, vamos deixar o commit como está.
+
+Como o editor é o VI, basta executar :x para salvar e sair. Ao final, teremos um novo commit criado. Se executarmos o comando git log --graph, podemos observar o que acontece na main.
+por último mostra o merge commit, isto é, o commit de mescla.
+
+Reparem que bifurcamos o nosso trabalho e depois unimos. Lembrando que tudo isso é feito automaticamente pelo Git, mas é importante entender que existem essas duas estratégias: de fast forward e de criação do merge commit.
+
+Dessa forma, conseguimos unir trabalho de duas branches diferentes para ter tudo na linha principal;
+ unimos à linha principal, então agora podemos fazer deploy da nossa aplicação.
+
+Para finalizar, vamos executar o comando git push origin main para atualizar a main com todo o trabalho novo.
+ Em seguida, removeremos a branch nova-funcionalidade com git branch -d,
+  para manter o projeto limpo e sem excesso de branches.
+
+`git push origin main
+
+git branch -d nova-funcionalidade`
+
+---
+--- 

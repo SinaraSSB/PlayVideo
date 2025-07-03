@@ -751,10 +751,15 @@ use:
   git checkout newbranch
   ```
 ou
-  `git checkout -b newbranch`   -- cria e move para ela 
+
+  `git checkout -b newbranch`         -- cria e move para ela 
+
 faz as alterações necessárias na nova branch
-`  git add .
-  git commit -m 'msg newbranc'`
+
+```markdown
+  git add .
+  git commit -m 'msg newbranc'
+```
 
 essas alterações ficam só na newbranch, 
 quando desejar juntar essas alterações a main
@@ -769,8 +774,10 @@ Estamos no cenário onde as duas branches evoluíram de forma independente. Este
 
 Sendo assim, quando fizermos um git switch para main e tentarmos fazer um git merge de nova-funcionalidade, o Git vai entender que esses dois trabalhos estão independentes e não evoluíram de forma igual. Dessa forma, ele irá unir criando um novo commit automaticamente. Ele criará um novo commit de merge, ou merge commit, como normalmente é chamado nas documentações.
 
-`git switch main
-git merge nova-func`
+```markdown
+git switch main
+git merge nova-func
+```
 
 
 Com esses comandos, será aberto um editor que permite a alteração da mensagem de commit de merge. 
@@ -788,9 +795,11 @@ Para finalizar, vamos executar o comando git push origin main para atualizar a m
  Em seguida, removeremos a branch nova-funcionalidade com git branch -d,
   para manter o projeto limpo e sem excesso de branches.
 
-`git push origin main
+```markdown
+git push origin main
 
-git branch -d nova-funcionalidade`
+git branch -d nova-funcionalidade
 
+```
 ---
 --- 

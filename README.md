@@ -727,4 +727,11 @@ Mais uma vez, o código aparecerá atualizado com o que adicionamos.
 
 **Após teclar "Enter", a nova ramificação será criada e teremos uma nova linha de trabalho.**
 
-[https://git-school.github.io/visualizing-git/](https://git-school.github.io/visualizing-git/)git 
+[https://git-school.github.io/visualizing-git/](https://git-school.github.io/visualizing-git/)
+
+> *obs.: git checkout é um comando “antigo” e que há alternativas mais modernas. É importante ressaltar que o comando checkout continua funcionando e não há nenhum indício de que ele será removido do git, mas devido à sua grande complexidade, ele foi separado em dois comandos diferentes: o git switch, que também vimos nessa aula,
+ e o git restore,*
+
+>Note que fizemos o push de nova-funcionalidade, e no GitHub, ele exibe uma mensagem que indica que podemos criar uma pull request a partir da nossa nova branch.
+
+>O GitHub já identificou que existe uma nova branch e que, em algum momento, vamos querer unir a branch nova-funcionalidade com a main, que é a branch principal.

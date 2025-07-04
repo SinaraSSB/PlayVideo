@@ -842,3 +842,6 @@ a.>
 
 * **Lembre-se:** sempre criamos commits quando o nosso projeto está em um estado funcional.
 
+--- Guardando as alterações feitas - git stash 
+
+https://cursos.alura.com.br/course/git-github-dominando-controle-versao-codigo/task/150398

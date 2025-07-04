@@ -811,3 +811,30 @@ Essa sugestão de alteração é, de forma resumida, a abordagem que adotamos ao
 ## comando mágico chamado git rebase
 
 [git rebase](https://cursos.alura.com.br/course/git-github-dominando-controle-versao-codigo/task/150397)
+
+criamos uma nova branch chamada nova-funcionalidade e estamos trabalhando nela. Enquanto trabalho nessa branch, outras pessoas podem ter criado outros branches e já se uniram à linha principal, à main. Normalmente, essa main é o projeto final que pode ser enviado à produção. É o projeto com todas as funcionalidades que estejam completas.
+
+Estamos criando uma nova funcionalidade, porém queremos testá-la na versão mais recente do projeto. Repare que, a partir do momento em que criamos a nova-funcionalidade, dois outros commits também foram criados, ou seja, duas funcionalidades foram adicionadas no projeto principal.
+
+Queremos garantir que o que estamos desenvolvendo funcione, mesmo com as funcionalidades que as outras pessoas criaram. Queremos garantir que tudo se integre da forma correta.
+
+Sendo assim, queremos fazer com que a branch nova-funcionalidade não seja criada a partir da versão antiga da branch maine sim da versão mais nova.
+
+Portanto, queremos reescrever a história, fazendo com que o primeiro commit da nova funcionalidade venha logo após do momento atual da main atualizada. Queremos fazer com que a branch nova-funcionalidade, seja reescrito para ter todas as funcionalidades da main antes dela.
+
+Isso pode ser feito com um comando mágico chamado git rebase, que faz muita coisa, como reescrever a história dos commits. Então, se estivermos em nova-funcionalidade e executarmos o comando git rebase main, ele pegará todos os commits da main que não estão na branch nova-funcionalidade, e tentar adicionar um a um antes da branch nova-funcionalidade.
+
+`git rebase main`
+
+Ele pegará o primeiro commit e tentar adicionar antes do commit nova-funcionalidade. Pegará o próximo commit, que é o último da main, e tentar adicionar antes do commit nova-funcionalidade. Após isso, pega todos os commits da nova-funcionalidade e aplica depois do último da main.
+
+Pode parecer bastante complexo, mas se visualizarmos o que está acontecendo, talvez fique um pouco mais fácil. Ele primeiro traz o head para a main e depois aplica tudo da nova-funcionalidade, cada um dos commits, depois. Vai aplicando commit a commit depois da última coisa que estiver na main.
+
+> Recapitulando novamente. Temos duas branches independentes, uma main e uma nova-funcionalidade. Se queremos garantir que essa nova-funcionalidade agora tenha tudo o que tem na main também, podemos fazer o rebase.
+> 
+> 
+> 
+> O rebase fará o quê? Se estamos na nova-funcionalidade e tentamos fazer o rebase com a main, ele vai alterar o branch para ir para a main. Depois da main, ele vai aplicando cada um dos commits da nova-funcionalidade. Isso é feito commit por commit, porque se tiver algum conflito em algum dos commits, vamos resolvendo um a um. Dessa forma, conseguimos reescrever a história.
+a.> 
+> 
+> Reparem que agora o nova-funcionalidade possui dois commits com hashes diferentes, porque vieram de outro lugar a partir de uma nova história. 

@@ -87,9 +87,12 @@ Feito isso, os blocos de lista serão ocultados, mantendo apenas o que desejamos
 
 .rodape__container {
     display: flex;
-    /* justify-content: space-between;      */
-    flex-flow: column wrap;
-}
+    
+    /* flex-direction: column;
+    justify-content: space-between;      
+    flex-flow: column wrap; */
+} 
+
 
 
 

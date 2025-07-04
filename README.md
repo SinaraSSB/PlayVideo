@@ -830,11 +830,12 @@ Ele pegará o primeiro commit e tentar adicionar antes do commit nova-funcionali
 
 Pode parecer bastante complexo, mas se visualizarmos o que está acontecendo, talvez fique um pouco mais fácil. Ele primeiro traz o head para a main e depois aplica tudo da nova-funcionalidade, cada um dos commits, depois. Vai aplicando commit a commit depois da última coisa que estiver na main.
 
+
 > Recapitulando novamente. Temos duas branches independentes, uma main e uma nova-funcionalidade. Se queremos garantir que essa nova-funcionalidade agora tenha tudo o que tem na main também, podemos fazer o rebase.
-> 
-> 
-> 
+>  
 > O rebase fará o quê? Se estamos na nova-funcionalidade e tentamos fazer o rebase com a main, ele vai alterar o branch para ir para a main. Depois da main, ele vai aplicando cada um dos commits da nova-funcionalidade. Isso é feito commit por commit, porque se tiver algum conflito em algum dos commits, vamos resolvendo um a um. Dessa forma, conseguimos reescrever a história.
 a.> 
 > 
 > Reparem que agora o nova-funcionalidade possui dois commits com hashes diferentes, porque vieram de outro lugar a partir de uma nova história. 
+
+* O merge junta os trabalhos de duas branches, podendo gerar um merge commit. Já o rebase aplica os commits de outra branch na branch atual. O trabalho do rebase é equivalente ao que vimos na prática como fast forward do merge. Ao realizar o rebase, todos os commits da outra branch são adicionados antes do primeiro commit da nossa branch atual, reescrevendo a história. Isso faz com que novas alterações possam ser integradas à nossa branch e permite que quando formos realizar o merge, não seja necessário um merge commit, garantindo o fast forward.*

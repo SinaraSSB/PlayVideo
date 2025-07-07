@@ -842,19 +842,77 @@ a.>
 
 * **Lembre-se:** sempre criamos commits quando o nosso projeto está em um estado funcional.
 
---- Guardando as alterações feitas - git stash 
-
-https://cursos.alura.com.br/course/git-github-dominando-controle-versao-codigo/task/150398gi
-
 
 --- 
 ## Guardando para depois - git stash
 ---
 `git stash`
-Agora, imagine o seguinte cenário: Estamos desenvolvendo uma funcionalidade grande. Estamos no meio da implementação dela, ela ainda não está pronta. No entanto, precisamos interromper o trabalho nela para resolver um bug urgente ou mudar nosso foco para alguma correção pequena que seja urgente. Ou seja, queremos interromper nosso trabalho. Como estamos no meio de uma funcionalidade, nosso código pode não estar compilando ou não 
-estar em um estado que possamos criar um commit.
+
+Agora, imagine o seguinte cenário: Estamos desenvolvendo uma funcionalidade grande. Estamos no meio da implementação dela, ela ainda não está pronta. No entanto, precisamos interromper o trabalho nela para 
+resolver um bug urgente ou mudar nosso foco para alguma correção pequena que seja urgente. Ou seja, 
+queremos interromper nosso trabalho. Como estamos no meio de uma funcionalidade, nosso código pode não 
+estar compilando ou não estar em um estado que possamos criar um commit.
+
 > Lembre-se: sempre criamos commits quando o nosso projeto está em um estado funcional.
 
 Se o código está compilando, se está, pelo menos, executando da forma esperada. Portanto, não vamos criar um commit com nosso código em um estado incompleto. O que fazemos se nos deparamos com um cenário onde estamos no meio da implementação de uma funcionalidade, mas precisamos interromper aquele processo? 
 
---- 
+### Criando uma nova funcionalidade
+
+Primeiro, se estamos criando uma nova funcionalidade, vamos criar um novo branch. 
+Portanto, escreveremos no terminal `git switch -c movendo-detalhes`.
+
+Estamos em uma nova branch, podemos criar nossa nova funcionalidade. 
+
+fomo interrompidos: Um bug muito urgente surgiu, 
+então precisamos trabalhar em outra coisa. O que acontece?
+
+Não podemos criar um commit agora. Nosso projeto está em um estado inválido, removemos a chamada de função.
+ Além disso, se executarmos um git status, temos modificações. Portanto, não podemos começar a trabalhar em outra coisa e ir para outro branch, porque o arquivo app.js está modificado. Precisamos desfazer essa alteração, mas guardar o que já alteramos.
+
+ ## Guardando as alterações feitas
+ O que queremos fazer é engavetar a alteração que fizemos até agora, mas sem criar um commit. Queremos guardar ela para depois, queremos estocar ela para depois poder recuperar e continuar trabalhando. E é exatamente isso que o comando git stash faz. Ele guarda uma alteração para continuarmos trabalhando nela depois.
+
+Se executarmos o comando `git stash`, ele vai pegar tudo o que está no nosso estado atual e estocar. Ele vai guardar para que possamos recuperá-lo depois.
+
+O git stash nos diz que salvou o nosso estado na nossa gaveta, no nosso estoque ("Saved working directory and index state WIP on movendo-detalhes: linha do script"). Portanto, se voltarmos para o nosso arquivo, ele estara no seu estado válido, ele voltou lá com a nossa alteração.
+
+depois que cuidamos do bug e podemos voltar para esse branch de nova funcionalidade e retomar o trabalho,
+recuperar o que está no nosso stash.
+
+### Recuperando as alterações
+
+Podemos executar o comando git stash pop. Esse pop, ele aplica o que tiver na nossa gaveta, no nosso estoque.
+
+Após executarmos o `git stash pop`, a função não está mais na linha 12. Então, podemos continuar a implementação e trazê-la para cima. Agora temos o nosso estado finalizado.
+
+> Portanto, o git stash guarda uma alteração para que ela possa ser retomada depois.
+
+> Ele guarda um estado para que possamos retomá-lo depois. E normalmente é utilizado quando estamos no meio de uma alteração, queremos guardar algo rapidamente para corrigir um bug e trabalhar em outra coisa rapidamente e depois voltar a trabalhar nisso. Portanto, não podemos criar um commit.
+
+ Se executarmos o comando `git stash list`, ele lista tudo o que está nesse nosso estoque.
+
+$ git stash list
+stash@{0}: WIP on movendo-detalhes: c53eb16 Quebrando linha do script
+stash@{1}: WIP on main: c53eb16 Quebrando linha do script
+$
+
+> Mas repare que os nomes que esse nosso git stash list nos mostra não são muito descritivos. 
+> Ele coloca um work in progress (WIP) na branch que estávamos e o último commit antes de adicionarmos esse stash. Portanto, isso não é muito útil.
+
+### Limpando as alterações guardadas
+
+`git stash clear`
+
+podemos limpar a nossa stash, apagar tudo? 
+Podemos fazer um git stash clear, limpamos a nossa stash.
+Portanto, se fizermos o git stash list, não tem mais nada lá.
+
+### Acrescentando uma descrição à stash
+
+Agora, se quisermos adicionar algo a nossa stash, mas com um nome mais descritivo, podemos fazer,
+ ao invés de só git stash, vamos escrever git stash push -m. 
+ E aí, podemos adicionar uma mensagem qualquer, será "Movendo chamada de função".
+
+` git stash push -m "Movendo chamada de função"`
+---

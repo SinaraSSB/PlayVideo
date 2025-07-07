@@ -951,3 +951,48 @@ Se vamos pegar um prato, pegamos o prato que está em cima, certo?
 
 ENTENDENDO O CONCEITO PILHA
 ---
+
+Se fizermos um git stash pop, ele sempre vai aplicar a última alteração que adicionamos.
+ Portanto, ele sempre pega esse de índice zero. **Ele sempre vai empilhando modificações.**
+
+O que isso quer dizer? Imagina que essa nossa stash é uma gaveta e nessa gaveta estamos guardando pratos. Portanto, abrimos a gaveta, colocamos um prato. Na gaveta, adicionamos outro prato em cima. Se vamos pegar um prato, pegamos o prato que está em cima, certo? 
+Portanto, é o último que adicionamos. **Isso é o conceito de pilha.**
+Temos aqui na stash uma pilha de modificações. Portanto, quando fazemos pop, sempre aplicamos a última que adicionamos. 
+
+---
+
+### Retomando alterações anteriores à versão mais recente
+
+`git stash apply`
+
+quando queremos aplicar algo que está na stash anterior à versão mais recente, podemos fazer o git stash apply e o índice. Podemos aplicar várias stashes se elas não estiverem no mesmo arquivo, se elas não forem conflitar com o que temos.
+
+> git stash:
+> se temos alguma alteração que precisamos adicionar ou salvar para depois, chamamos o comando `git stash.` 
+> O comando git stash vai adicionando mensagens no formato de pilha. 
+> 
+> Se queremos pegar algo e aplicar uma alteração à última stash que adicionamos, usamos `git stash pop`;
+> 
+> Se queremos aplicar alguma específica, usamos `git stash apply`;
+> 
+> Se queremos adicionar algo na nossa stash com mensagem, usamos `git stash push`;
+> sem msg seria `git stash`;
+> 
+> Se queremos limpar a nossa stash, usamos `git stash clear`.
+> O comando git stash clear limpa a stash, ou seja, apaga tudo que foi salvo com o comando git stash. 
+> Caso você queira remover apenas um único item da stash, você pode utilizar git stash drop.
+> 
+> se queremos ver a nossa lista,  usamos ` git stash list`
+
+### Para saber mais: pop, drop e apply
+
+Os comandos pop, drop e apply do git stash possuem semelhanças e diferenças bem importantes, então vamos fazer um pequeno resumo de suas funcionalidades aqui:
+
+#### Apply
+O comando git stash apply espera um índice de um item na stash e o aplica ao repositório, porém, esse comando não remove o item da stash, ou seja, se após executar o comando git stash apply 1 você executar git stash list, o item referente ao índice 1 continuará na stash.
+
+#### Pop
+O git stash pop faz exatamente a mesma coisa que o git stash apply, porém, além de aplicar o item da stash, ele também o remove de lá. Esse comando, sem nenhum parâmetro extra, vai aplicar o último item adicionado à stash, mas nós também podemos informar um índice para ele, como git stash pop 1.
+
+#### Drop
+O git stash drop funciona exatamente como o pop, mas com uma simples diferença: ele apenas remove o item da stash, sem aplicá-lo em nosso repositório. Dessa forma, git stash drop remove o último item adicionado à stash, enquanto o git stash drop 1 remove da stash o item com índice 1.

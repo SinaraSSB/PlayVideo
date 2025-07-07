@@ -845,3 +845,6 @@ a.>
 --- Guardando as alterações feitas - git stash 
 
 https://cursos.alura.com.br/course/git-github-dominando-controle-versao-codigo/task/150398
+
+### fiz um git stash 
+### testando o stash

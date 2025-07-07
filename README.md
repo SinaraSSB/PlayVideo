@@ -842,6 +842,22 @@ a.>
 
 * **Lembre-se:** sempre criamos commits quando o nosso projeto está em um estado funcional.
 
+--- Guardando as alterações feitas - git stash 
+
+https://cursos.alura.com.br/course/git-github-dominando-controle-versao-codigo/task/150398gi
+
+
+--- 
+## Guardando para depois - git stash
+---
+`git stash`
+Agora, imagine o seguinte cenário: Estamos desenvolvendo uma funcionalidade grande. Estamos no meio da implementação dela, ela ainda não está pronta. No entanto, precisamos interromper o trabalho nela para resolver um bug urgente ou mudar nosso foco para alguma correção pequena que seja urgente. Ou seja, queremos interromper nosso trabalho. Como estamos no meio de uma funcionalidade, nosso código pode não estar compilando ou não 
+estar em um estado que possamos criar um commit.
+> Lembre-se: sempre criamos commits quando o nosso projeto está em um estado funcional.
+
+Se o código está compilando, se está, pelo menos, executando da forma esperada. Portanto, não vamos criar um commit com nosso código em um estado incompleto. O que fazemos se nos deparamos com um cenário onde estamos no meio da implementação de uma funcionalidade, mas precisamos interromper aquele processo? 
+
+--- 
 
 --- 
 ## Guardando para depois - git stash

@@ -900,7 +900,9 @@ recuperar o que está no nosso stash.
 
 Podemos executar o comando git stash pop. Esse pop, ele aplica o que tiver na nossa gaveta, no nosso estoque.
 
-Após executarmos o `git stash pop`, a função não está mais na linha 12. Então, podemos continuar a implementação e trazê-la para cima. Agora temos o nosso estado finalizado.
+`git stash pop`
+
+Após executarmos o `git stash pop`, o que estava guardado é aplicado novamente ao código.
 
 > Portanto, o git stash guarda uma alteração para que ela possa ser retomada depois.
 
@@ -926,9 +928,26 @@ Portanto, se fizermos o git stash list, não tem mais nada lá.
 
 ### Acrescentando uma descrição à stash
 
-Agora, se quisermos adicionar algo a nossa stash, mas com um nome mais descritivo, podemos fazer,
- ao invés de só git stash, vamos escrever git stash push -m. 
+Agora, se quisermos adicionar algo a nossa stash, mas com um nome mais descritivo,
+ **podemos fazer, ao invés de só git stash,** vamos escrever git stash push -m. 
  E aí, podemos adicionar uma mensagem qualquer, será "Movendo chamada de função".
 
 ` git stash push -m "Movendo chamada de função"`
+
+E se fizermos um git stash list, temos um nome bem mais descritivo. 
+
+### Entendendo a pilha de modificações
+
+Se fizermos um git stash pop, ele sempre vai aplicar a última alteração que adicionamos.
+ Portanto, ele sempre pega esse de índice zero. Ele sempre vai empilhando modificações.
+
+O que isso quer dizer? Imagina que essa nossa stash é uma gaveta e nessa gaveta estamos guardando pratos. Portanto, abrimos a gaveta, colocamos um prato. Na gaveta, adicionamos outro prato em cima. 
+Se vamos pegar um prato, pegamos o prato que está em cima, certo?
+ Portanto, é o último que adicionamos. Isso é o conceito de pilha.
+
+> Temos aqui na stash uma pilha de modificações. Portanto, quando fazemos pop, sempre aplicamos a última que adicionamos. 
+
+
+
+ENTENDENDO O CONCEITO PILHA
 ---

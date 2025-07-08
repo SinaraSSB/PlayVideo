@@ -1043,3 +1043,22 @@ não desfazemos a alteração, mas retornamos ao estado anterior. Agora, é como
 Agora, se quisermos desfazer as alterações, fazemos o `git restore arquivo.html`.
 Sendo assim, desfizemos as alterações. Repare a diferença entre o --staged e o staged.
 
+Um outro parâmetro que podemos passar para o restore é, suponha que queremos mover nosso arquivo.html para o estado que estava quando fizemos o Merge branch 'nova-func' into main.
+
+O que podemos fazer? Podemos copiar o hash do commit, fazer o git restore --source = e colá-lo em seguida. Queremos restaurar para esse estado nosso arquivo.html. O comando inteiro ficará parecido com o seguinte:
+
+`git restore --source = 5081a55bc92af2917c8519f16a7412b86ba3b1c2 arquivo.html`
+
+Quando fazemos isso, ele pega o arquivo e o coloca no estado que estava nesse commit.
+
+Mas, se quisermos apenas visualizar o arquivo e entender como ele estava naquele estado, podemos desfazer esse trabalho, ou seja, restaurar para o estado normal dele com o git restore arqiuvo.html, que é equivalente a fazer --source = head.
+
+> Fazer o restore sem esse --source é equivalente a fazer --source = head, que corresponde ao último commit que temos no branch atual.
+
+--- 
+
+> Working Tree (Árvore de Trabalho): É o espaço onde você está trabalhando nos arquivos do seu projeto. Aqui, você pode fazer alterações, adicionar novos arquivos ou modificar os existentes. Basicamente, é o que você vê e edita diretamente no seu computador.
+
+Staging Area (Área de Preparação): É como uma "pré-seleção" dos arquivos que você deseja incluir no próximo commit. Quando você faz alterações nos arquivos e usa o comando git add, está colocando esses arquivos na staging area. Isso significa que eles estão prontos para serem salvos na próxima versão do seu projeto, mas ainda não foram efetivamente salvos.
+
+--- 

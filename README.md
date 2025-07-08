@@ -1006,11 +1006,14 @@ Porém, nós percebemos que a implementação está incorreta ou a funcionalidad
 > Se temos apenas um arquivo, para descartar essa modificação, podemos fazer um Ctrl + Z.
 Mas, se temos vários arquivos, sair fazendo Ctrl + Z em muitos lugares pode ser bastante cansativo.
 Para isso, podemos utilizar o git.
+
 Então, nosso git status tem modificações. E o que queremos fazer é desfazer essas modificações.
 Nós não fizemos git add e não commitamos isso. 
 > Como não foi commitado, não é um revert, nem um reset. 
+
 O que queremos fazer é restaurar o nosso local de trabalho para um estado válido, sem essas modificações.
 Então, queremos fazer um git restore.
+
 > Podemos fazer o restore para algum estado específico, mas se não informarmos o estado, isso significa que a restauração será feita sem o que foi modificado. Ou seja, o último commit do nosso branch atual.
 
 Então, queremos fazer o restore de quê? Podemos fazer de app.js e de index.html um de cada vez. Ou fazer do ponto (git restore .). Assim como já aprendemos que o git add . adiciona o projeto todo, o git restore . restaura todo o projeto também. E esse ponto não é um significado especial do git.

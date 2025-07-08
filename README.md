@@ -1073,5 +1073,21 @@ Queremos marcar um ponto no commit Quebrando a linha do script e torná-lo um sa
 
 Uma tag no Git é criada através do comando git tag nome_da_tag, que rodamos no Terminal. Por exemplo, vamos rodar o comando git tag v0.1.0. Assim, criamos uma tag na nossa HEAD, ou seja, no momento mais recente da branch que tivermos feito o commit. Após criarmos a tag e rodarmos o comando git log de novo, recebemos as informações do commit com a nossa tag
 
-`git log`
-` git log --oneline`
+`git log`  ou  ` git log --oneline`
+
+> Dica: A tag pode ter qualquer nome. Utilizamos o nome v0.1.0 para parecer com uma versão de lançamento, porque faz bastante sentido para esse exemplo.
+
+> Podemos rodar o git push origin main. Após fazermos o push de tudo e rodarmos o git log --oneline, 
+> 
+> ainda teremos o retorno da tag: v.0.1.0 no mesmo commit . Portanto, a tag nunca vai se mover, ela sempre vai apontar para o mesmo commit.  A tag é um ponteiro nomeado para um commit específico: o nome que damos para algum commit. Dessa forma, conseguimos salvar o estado da aplicação naquele momento.
+
+### Criando tags para commits fora da HEAD
+
+Se rodarmos simplesmente git tag v.0.1.1, ele cria um commit no nosso HEAD. 
+Porém, se quisermos, podemos criar uma tag para algum commit específico.
+Cada comit tem o código 502afb6.
+
+Com o código que aparece no começo da linha de commit, podemos criar uma tag para qualquer commit 
+no nosso histórico, através da estrutura: git tag nome_da_tag código_do_commit. 
+
+`git tag v0.0.1 95e9ed1`

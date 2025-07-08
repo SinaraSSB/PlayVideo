@@ -996,3 +996,29 @@ O git stash pop faz exatamente a mesma coisa que o git stash apply, porém, alé
 
 #### Drop
 O git stash drop funciona exatamente como o pop, mas com uma simples diferença: ele apenas remove o item da stash, sem aplicá-lo em nosso repositório. Dessa forma, git stash drop remove o último item adicionado à stash, enquanto o git stash drop 1 remove da stash o item com índice 1.
+
+--- 
+
+### git restore  - Descartando várias alterações
+
+Imaginem que nós estamos criando alguma modificação. Temos vários arquivos modificados e alterados. 
+Porém, nós percebemos que a implementação está incorreta ou a funcionalidade não será mais implementada. Basicamente, queremos descartar o que foi feito.
+> Se temos apenas um arquivo, para descartar essa modificação, podemos fazer um Ctrl + Z.
+Mas, se temos vários arquivos, sair fazendo Ctrl + Z em muitos lugares pode ser bastante cansativo.
+Para isso, podemos utilizar o git.
+Então, nosso git status tem modificações. E o que queremos fazer é desfazer essas modificações.
+Nós não fizemos git add e não commitamos isso. 
+> Como não foi commitado, não é um revert, nem um reset. 
+O que queremos fazer é restaurar o nosso local de trabalho para um estado válido, sem essas modificações.
+Então, queremos fazer um git restore.
+> Podemos fazer o restore para algum estado específico, mas se não informarmos o estado, isso significa que a restauração será feita sem o que foi modificado. Ou seja, o último commit do nosso branch atual.
+
+Então, queremos fazer o restore de quê? Podemos fazer de app.js e de index.html um de cada vez. Ou fazer do ponto (git restore .). Assim como já aprendemos que o git add . adiciona o projeto todo, o git restore . restaura todo o projeto também. E esse ponto não é um significado especial do git.
+
+> Na linha de comando, o ponto significa o diretório atual. Então, estamos fazendo o restore de tudo na pasta atual.
+
+Então, esse git restore vai fazer um **Ctrl + Z no nosso projeto**. Assim, as linhas que adicionamos serão apagadas, de todos os arquivos que alteramos e não commitamos ainda. Então, com isso, se fazemos um git status, temos o nosso projeto limpo novamente.
+
+E o `git restore` é um dos comandos que veio para substituir o `git checkout`. Então, o git checkout, como dissemos, faz muitas coisas. Uma das coisas que ele fazia é o restore. Com o `git checkout -- .`, temos o mesmo resultado.
+
+> O git restore restaura o projeto ou restaura arquivos específicos para algum ponto específico. Por padrão, ele faz o restore para head, ou seja, para o nosso último commit, que no nosso caso aqui é quebrando a linha do script.

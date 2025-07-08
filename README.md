@@ -1028,12 +1028,18 @@ E o `git restore` é um dos comandos que veio para substituir o `git checkout`. 
 
 --- 
 
+#### git restore --staged 
+
 Vamos supor que fizemos alterações em um arquivo; e adicionamos com o git add arquivo.html 
 para fazer o commit. então, ele está no "stage", pronto para ser comitado. 
 Isso é o que chamamos de "stage" ou "staging area". Mas, o que acontece se quisermos desfazer isso? 
 Não estamos prontos para comitar. Queremos fazer mais alterações ou simplesmente desistir dessa modificação.
 
 Note que o próprio git já nos mostra que podemos fazer um restore do que está em nossa "staging area". Se fizermos git restore --staged, significa que estamos modificando algo que está dentro dessa "staging area", dentro de algo que fizemos com o git add.
-Assim, com git restore --staged arquivo.html, não desfazemos a alteração, mas retornamos ao estado anterior. Agora, é como se não tivéssemos feito o git add. 
-Agora, se quisermos desfazer as alterações, fazemos o git restore arquivo.html.
+
+Assim, com `git restore --staged arquivo.html`, 
+não desfazemos a alteração, mas retornamos ao estado anterior. Agora, é como se não tivéssemos feito o git add. 
+
+Agora, se quisermos desfazer as alterações, fazemos o `git restore arquivo.html`.
 Sendo assim, desfizemos as alterações. Repare a diferença entre o --staged e o staged.
+

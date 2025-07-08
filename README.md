@@ -1062,3 +1062,16 @@ Fazer o restore sem esse --source é equivalente a fazer --source = head, que co
 > Staging Area (Área de Preparação): É como uma "pré-seleção" dos arquivos que você deseja incluir no próximo commit. Quando você faz alterações nos arquivos e usa o comando git add, está colocando esses arquivos na staging area. Isso significa que eles estão prontos para serem salvos na próxima versão do seu projeto, mas ainda não foram efetivamente salvos.
 
 --- 
+
+## Criando commits com tags
+
+Por exemplo, no Terminal do VS Code, vamos executar o comando git log --oneline. Vemos que nossa HEAD no branch main, que está em um commit chamado Quebrando a linha do script. Este foi o último commit que criamos. Sabemos que um branch, conforme adicionamos novos commits. Logo, a HEAD muda de local.
+
+Queremos marcar um ponto no commit Quebrando a linha do script e torná-lo um save point, indicando que ele representa o lançamento da nossa versão 0.1.0, por exemplo. Ou qualquer outra versão. Portanto, conseguimos nomear pontos específicos do nosso código, e, no Git, chamamos esse processo de tag.
+
+`git tag v0.1.0`
+
+Uma tag no Git é criada através do comando git tag nome_da_tag, que rodamos no Terminal. Por exemplo, vamos rodar o comando git tag v0.1.0. Assim, criamos uma tag na nossa HEAD, ou seja, no momento mais recente da branch que tivermos feito o commit. Após criarmos a tag e rodarmos o comando git log de novo, recebemos as informações do commit com a nossa tag
+
+`git log`
+` git log --oneline`

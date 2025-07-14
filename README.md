@@ -765,6 +765,7 @@ essas alterações ficam só na newbranch,
 quando desejar juntar essas alterações a main
 
 `git checkout main
+
 git merge newbranch ` 
 
 resolve os conflitos e faz o commit da nova branch
@@ -949,7 +950,7 @@ Se vamos pegar um prato, pegamos o prato que está em cima, certo?
 
 
 
-ENTENDENDO O CONCEITO PILHA
+#### ENTENDENDO O CONCEITO PILHA
 ---
 
 Se fizermos um git stash pop, ele sempre vai aplicar a última alteração que adicionamos.
@@ -1138,3 +1139,47 @@ Também podemos clicar no retângulo com reticências ao lado do nome da tag "v0
 **A annotated tag**, além da mensagem exibida, carrega informações da pessoa autora da tag e a data que a tag foi criada, enquanto a tag comum é apenas um ponteiro para o commit. Existe essa pequena diferença entre uma tag que é annotated e uma tag que não é annotated.
 
 Outro detalhe interessante é que esse parâmetro -a é opcional, porque se passamos alguma informação para a nossa tag, como uma mensagem (-m), o Git já entende que essa tag é annotated. Portanto, conseguimos criar uma annotated tag mesmo sem o parâmetro -a.
+
+Um detalhe que esquecemos de mostrar é que, nas Annotated Tags, como mencionamos, há informações ocultas que podemos verificar.
+
+Podemos acessar o terminal e digitar o seguinte:
+
+`git tag -v v0.1.2`
+
+Para verificar a tag v 0.1.1, serão exibidas informações indicando para qual commit ela aponta, o tipo (podemos criar uma tag para outra coisa, mas vamos focar no tipo de commit aqui), o nome dessa tag, quem a criou e sua mensagem. Temos, portanto, as informações dessa tag.
+
+Se tentarmos fazer o mesmo para a tag que não é annotated, teremos um erro, porque o nome v 0.1.0 é basicamente um apelido para um commit, então ela não existe como tag propriamente dita. Essa é uma diferença entre Annotated Tags e Unannotated Tags.
+
+--- 
+
+## Pegando um commit de uma outra branch 
+
+Como podemos pegar um commit de outro branch e aplicar, sem precisar copiar o código?
+
+> Dica: ao fazer git log com o nome de uma branch, ele vai mostrar o log daquela branch, e não do branch atual.
+
+git log nomedabranch
+
+Podemos copiar o hash do commit
+
+Quando chamamos git branch, nos certificamos que estamos na funcionalidade1. Queremos pegar aquele commit que está na funcionalidade2 e aplicar no branch atual.
+
+Então, queremos buscar um commit, e o nome disso é cherry-pick. Vamos executar o git cherry-pick com o hash daquele commit.
+
+`git cherry-pick 609bc79b23305a1db648811ec72ec067e1806df` 
+
+> isso Vai pegar o commit com esse hash e aplicar no branch atual.
+
+git log
+
+Com isso, temos um novo commit sendo aplicado na branch.
+
+> O cherry-pick serve exatamente para esses cenários, quando duas funcionalidades precisam da mesma alteração. 
+> 
+> Então pegamos um commit específico para o branch atual.
+> 
+> Dessa forma, conseguimos selecionar um commit específico e aplicá-lo no nosso branch atual 
+> 
+> de forma bastante simples com o cherry-pick.
+> 
+> 

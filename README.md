@@ -758,6 +758,7 @@ faz as alterações necessárias na nova branch
 
 ```markdown
   git add .
+
   git commit -m 'msg newbranc'
 ```
 
@@ -766,9 +767,12 @@ quando desejar juntar essas alterações a main
 
 `git checkout main
 
+
 git merge newbranch ` 
 
 resolve os conflitos e faz o commit da nova branch
+
+| para desfazer o merge usa-se git merge --abort
 
 ## Fazendo um merge commit
 Estamos no cenário onde as duas branches evoluíram de forma independente. Este é o cenário mais comum: trabalhamos na branch de alguma funcionalidade, e outras funcionalidades foram adicionadas à main, outras coisas foram feitas e já estão na linha de trabalho principal.

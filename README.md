@@ -4,6 +4,8 @@
 
 ---
 
+---
+
 > `git init `
 
 > `git add . `
@@ -19,6 +21,8 @@
 > `git push -u origin main `
 
 <hr>
+
+---
 
 https://www.devmedia.com.br/comandos-e-tags-html5/23618
 
